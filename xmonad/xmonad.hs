@@ -1,0 +1,70 @@
+import XMonad 
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Actions.WindowGo(runOrRaiseMaster)
+import XMonad.Layout.Tabbed
+import qualified Data.Map as M
+import System.IO
+import qualified XMonad.StackSet as W
+import XMonad.Hooks.ManageHelpers
+import XMonad.Layout.NoBorders
+
+main = do
+	trproc <- spawnPipe trayerCommand
+	xmproc <- spawnPipe xmobarCommand
+	xmonad $ defaultConfig
+		{ manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
+        , workspaces = myWorkspaces
+		, layoutHook = myLayout --avoidStruts $ layoutHook defaultConfig
+		, logHook = myLogHook xmproc
+		, modMask = mod4Mask  -- Rebind Mod to the Meta key
+        , keys = myKeys 
+		} 
+
+-- Workspaces
+myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
+
+-- Layouts
+myLayout = avoidStruts $ simpleTabbed ||| tiled ||| Mirror tiled ||| Full
+  where
+    tiled   = Tall 1 (3/100) (1/2)
+
+-- Float gimp and vncviewer
+myManageHook = composeAll
+	[ className =? "Gimp"		--> doFloat
+	, className =? "Vncviewer"	--> doFloat
+    , isFullscreen              --> (doF W.focusDown <+> doFullFloat)
+	]
+
+-- Commands used to run external programs
+xmobarCommand = "/usr/bin/xmobar ~/.xmobarrc"
+trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 0 --tint 0x000000 --height 17 --margin 125" 
+
+-- Union default and new key bindings
+myKeys x  = M.fromList (newKeys x) `M.union` keys defaultConfig x
+
+-- Add new and/or redefine key bindings
+newKeys conf@(XConfig {XMonad.modMask = modm}) = 
+    [ ((mod4Mask, xK_q),               spawn "killall conky trayer; xmonad --recompile; xmonad --restart")
+    , ((mod4Mask, xK_s),               runOrRaiseMaster "spotify" (className =? "Spotify"))
+    , ((mod4Mask, xK_b),               spawn "google-chrome")
+    , ((mod4Mask, xK_v),               spawn "vlc")
+    , ((mod4Mask, xK_f),               spawn "thunar")
+    , ((mod4Mask, xK_Escape),          spawn "cb-exit")
+    , ((mod4Mask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
+    , ((controlMask, xK_Print),        spawn "sleep 0.2; scrot -s")
+    , ((0, xK_Print),                  spawn "scrot")
+    ]
+
+-- Custom colors for trayer
+myLogHook h = dynamicLogWithPP $ defaultPP 
+    { ppHidden  = xmobarColor "#FFFFFF" ""
+    , ppCurrent = xmobarColor "#00FFFF" "" . wrap "[" "]"
+    , ppUrgent  = xmobarColor "#00FFFF" "" . wrap "#" "#"
+    , ppLayout  = xmobarColor "#00FFFF" "" 
+    , ppTitle   = xmobarColor "#FFFFFF" "" . shorten 83
+    , ppSep     = " "
+    , ppOutput  = hPutStrLn h 
+    }
