@@ -1,4 +1,5 @@
-import XMonad 
+import XMonad hiding ( (|||) )  
+import XMonad.Layout.LayoutCombinators 
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
@@ -10,6 +11,9 @@ import System.IO
 import qualified XMonad.StackSet as W
 import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
+import XMonad.Actions.MouseGestures
+import qualified XMonad.StackSet as W
+import XMonad.Layout.Named(named)
 
 main = do
 	trproc <- spawnPipe trayerCommand
@@ -21,15 +25,16 @@ main = do
 		, logHook = myLogHook xmproc
 		, modMask = mod4Mask  -- Rebind Mod to the Meta key
         , keys = myKeys 
+        , mouseBindings = myMouseBindings
 		} 
 
 -- Workspaces
 myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
 
 -- Layouts
-myLayout = avoidStruts $ simpleTabbed ||| tiled ||| Mirror tiled ||| Full
-  where
-    tiled   = Tall 1 (3/100) (1/2)
+myLayout = avoidStruts $ named "Tabbed" simpleTabbed ||| tiled ||| Mirror tiled ||| Full
+    where
+        tiled = Tall 1 (3/100) (1/2)
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
@@ -56,6 +61,23 @@ newKeys conf@(XConfig {XMonad.modMask = modm}) =
     , ((mod4Mask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
     , ((controlMask, xK_Print),        spawn "sleep 0.2; scrot -s")
     , ((0, xK_Print),                  spawn "scrot")
+    ]
+
+-- Mouse Bindings
+myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
+    [ ((mod4Mask,               button3), (\w -> focus w >> mouseMoveWindow w)) -- Move
+    , ((mod4Mask .|. shiftMask, button3), (\w -> focus w >> mouseResizeWindow w 
+                                                         >> windows W.shiftMaster)) -- Resize
+    , ((mod4Mask,               button1), mouseGesture layoutGestures) 
+    -- you may also bind events to the mouse scroll wheel (button4 and button5)
+    ]
+
+-- Mouse Gestures
+layoutGestures = M.fromList
+    [ ([L], \_ -> sendMessage $ JumpToLayout "Tabbed")
+    , ([U], \_ -> sendMessage $ JumpToLayout "Tall")
+    , ([R], \_ -> sendMessage $ JumpToLayout "Mirror Tall")
+    , ([D], \_ -> sendMessage $ JumpToLayout "Full")
     ]
 
 -- Custom colors for trayer
