@@ -45,7 +45,7 @@ myManageHook = composeAll
 
 -- Commands used to run external programs
 xmobarCommand = "/usr/bin/xmobar ~/.xmobarrc"
-trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 0 --tint 0x000000 --height 17 --margin 125" 
+trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 0 --tint 0x1E0E00 --height 17 --margin 125" 
 
 -- Union default and new key bindings
 myKeys x  = M.fromList (newKeys x) `M.union` keys defaultConfig x
@@ -82,11 +82,11 @@ layoutGestures = M.fromList
 
 -- Custom colors for trayer
 myLogHook h = dynamicLogWithPP $ defaultPP 
-    { ppHidden  = xmobarColor "#FF0000" ""
-    , ppCurrent = xmobarColor "#00FF00" "" . wrap "(" ")"
-    , ppUrgent  = xmobarColor "#FF0000" "" . wrap "#" "#"
-    , ppLayout  = xmobarColor "#00FF00" "" 
-    , ppTitle   = xmobarColor "#FFFFFF" "" . shorten 83
+    { ppHidden  = xmobarColor "#D04300" ""
+    , ppCurrent = xmobarColor "#E68100" "" . wrap "(" ")"
+    , ppUrgent  = xmobarColor "#E68100" "" . wrap "#" "#"
+    , ppLayout  = xmobarColor "#D04300" "" 
+    , ppTitle   = xmobarColor "#E68100" "" . shorten 83
     , ppSep     = " "
     , ppOutput  = hPutStrLn h 
     }
