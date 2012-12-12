@@ -11,14 +11,13 @@ for config in configs:
 
     if islink(home_file):
         print config + ": Already linked"
+    elif exists(home_file):
+        move(home_file, config_file)
+        symlink(config_file, home_file)
+        print config + ": Moved existing file to .config"
+    elif exists(config_file):
+        symlink(config_file, home_file)
+        print config + ": Set link to existing file in .config"
     else:
-        if exists(home_file):
-            move(home_file, config_file)
-            symlink(config_file, home_file)
-            print config + ": Moved existing file to .config"
-        elif exists(config_file):
-            symlink(config_file, home_file)
-            print config + ": Set link to existing file in .config"
-        else:
-            print config + ": Couldn't find file"
+        print config + ": Couldn't find file"
 
