@@ -22,6 +22,7 @@ set number
 set hidden
 set virtualedit=block
 set hlsearch
+set shell=/bin/sh
 "set relativenumber
 
 colorscheme desert
