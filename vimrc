@@ -9,6 +9,9 @@ Bundle 'jonathanfilip/vim-lucius'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'paradigm/vim-multicursor'
+Bundle 'paradigm/SkyBison'
+Bundle 'mattn/gist-vim'
 
 filetype plugin indent on
 syntax enable
