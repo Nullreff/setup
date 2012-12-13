@@ -1,7 +1,11 @@
 [user]
-	name = Ryan Mendivil
-	email = rsmendivil@gmail.com
-[color]
-	ui = true
+    name = Ryan Mendivil
+    email = rsmendivil@gmail.com
 [alias]
-	branch-log = log --graph --full-history --all --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+    meld = /home/ryan/bin/git-meld/git-meld.pl
+[color]
+    ui = true
+[alias]
+    branch-log = log --graph --full-history --all --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+[github]
+    user = Nullreff
