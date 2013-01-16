@@ -16,17 +16,17 @@ import qualified XMonad.StackSet as W
 import XMonad.Layout.Named(named)
 
 main = do
-	trproc <- spawnPipe trayerCommand
-	xmproc <- spawnPipe xmobarCommand
-	xmonad $ defaultConfig
-		{ manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
+    trproc <- spawnPipe trayerCommand
+    xmproc <- spawnPipe xmobarCommand
+    xmonad $ defaultConfig
+        { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
         , workspaces = myWorkspaces
-		, layoutHook = myLayout --avoidStruts $ layoutHook defaultConfig
-		, logHook = myLogHook xmproc
-		, modMask = mod4Mask  -- Rebind Mod to the Meta key
+        , layoutHook = myLayout --avoidStruts $ layoutHook defaultConfig
+        , logHook = myLogHook xmproc
+        , modMask = mod4Mask  -- Rebind Mod to the Meta key
         , keys = myKeys 
         , mouseBindings = myMouseBindings
-		} 
+        } 
 
 -- Workspaces
 myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
@@ -38,10 +38,10 @@ myLayout = avoidStruts $ named "Tabbed" simpleTabbed ||| tiled ||| Mirror tiled 
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
-	[ className =? "Gimp"		--> doFloat
-	, className =? "Vncviewer"	--> doFloat
-    , isFullscreen              --> (doF W.focusDown <+> doFullFloat)
-	]
+    [ className =? "Gimp"      --> doFloat
+    , className =? "Vncviewer" --> doFloat
+    , isFullscreen             --> (doF W.focusDown <+> doFullFloat)
+    ]
 
 -- Commands used to run external programs
 xmobarCommand = "/usr/bin/xmobar ~/.xmobarrc"
@@ -69,7 +69,6 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod4Mask .|. shiftMask, button3), (\w -> focus w >> mouseResizeWindow w 
                                                          >> windows W.shiftMaster)) -- Resize
     , ((mod4Mask,               button1), mouseGesture layoutGestures) 
-    -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]
 
 -- Mouse Gestures
