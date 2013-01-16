@@ -38,9 +38,10 @@ myLayout = avoidStruts $ named "Tabbed" simpleTabbed ||| tiled ||| Mirror tiled 
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
-    [ className =? "Gimp"      --> doFloat
-    , className =? "Vncviewer" --> doFloat
-    , isFullscreen             --> (doF W.focusDown <+> doFullFloat)
+    [ className =? "Gimp"          --> doFloat
+    , className =? "Vncviewer"     --> doFloat
+    , className =? "Xfce4-notifyd" --> doIgnore
+    , isFullscreen                 --> (doF W.focusDown <+> doFullFloat)
     ]
 
 -- Commands used to run external programs
