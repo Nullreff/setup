@@ -1,6 +1,6 @@
 Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
-       , bgColor = "#1E0E00"
-       , fgColor = "#E68100"
+       , bgColor = "#000000"
+       , fgColor = "#7DBDD6"
        , position = TopW L 100
        , commands = [ Run Date "%a %b %_d %l:%M" "date" 10
                     , Run StdinReader

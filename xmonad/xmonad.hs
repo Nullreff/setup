@@ -82,11 +82,11 @@ layoutGestures = M.fromList
 
 -- Custom colors for trayer
 myLogHook h = dynamicLogWithPP $ defaultPP 
-    { ppHidden  = xmobarColor "#D04300" ""
-    , ppCurrent = xmobarColor "#E68100" "" . wrap "(" ")"
-    , ppUrgent  = xmobarColor "#E68100" "" . wrap "#" "#"
-    , ppLayout  = xmobarColor "#D04300" "" 
-    , ppTitle   = xmobarColor "#E68100" "" . shorten 83
+    { ppHidden  = xmobarColor "#405B80" ""
+    , ppCurrent = xmobarColor "#7DBDD6" "" . wrap "(" ")"
+    , ppUrgent  = xmobarColor "#7DBDD6" "" . wrap "#" "#"
+    , ppLayout  = xmobarColor "#405B80" "" 
+    , ppTitle   = xmobarColor "#7DBDD6" "" . shorten 83
     , ppSep     = " "
     , ppOutput  = hPutStrLn h 
     }

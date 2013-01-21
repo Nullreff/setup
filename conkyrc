@@ -56,20 +56,20 @@ lua_load ~/.lua/scripts/clock_rings.lua
 lua_draw_hook_pre clock_rings
 
 TEXT
-${voffset 8}${color E68100}${font Caviar Dreams:size=16}${time %A}${font}${voffset -8}${alignr 50}${color FFFFFF}${font Caviar Dreams:size=38}${time %e}${font}
-${color FFFFFF}${voffset -30}${color FFFFFF}${font Caviar Dreams:size=18}${time %b}${font}${voffset -3} ${color FFFFFF}${font Caviar Dreams:size=20}${time %Y}${font}${color E68100}${hr}
+${voffset 8}${color 7DBDD6}${font Caviar Dreams:size=16}${time %A}${font}${voffset -8}${alignr 50}${color FFFFFF}${font Caviar Dreams:size=38}${time %e}${font}
+${color FFFFFF}${voffset -30}${color FFFFFF}${font Caviar Dreams:size=18}${time %b}${font}${voffset -3} ${color FFFFFF}${font Caviar Dreams:size=20}${time %Y}${font}${color 7DBDD6}${hr}
 ${voffset 140}${font Caviar Dreams:size=10}${alignr}HOME${font}
 ${font Caviar Dreams:size=12}${color FFFFFF}${alignr}${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ PAJN temperature temperature 30} °F${font}
 ${image ~/.conky/debian-logo-2.png -p 68,120 -s 60x60}
 
 ${color FFFFFF}${goto 25}${voffset 35}${cpu cpu0}%
-${color E68100}${goto 25}CPU
+${color 7DBDD6}${goto 25}CPU
 ${color FFFFFF}${goto 50}${voffset 23}${memperc}%
-${color E68100}${goto 50}RAM
+${color 7DBDD6}${goto 50}RAM
 ${color FFFFFF}${goto 75}${voffset 23}${swapperc}%
-${color E68100}${goto 75}Swap
+${color 7DBDD6}${goto 75}Swap
 ${color FFFFFF}${goto 100}${voffset 23}${fs_used_perc /home}%
-${color E68100}${goto 100}Disk
+${color 7DBDD6}${goto 100}Disk
 ${color FFFFFF}${goto 125}${voffset 25}${downspeed eth0}
 ${color FFFFFF}${goto 125}${upspeed eth0}
-${color E68100}${goto 125}Net
+${color 7DBDD6}${goto 125}Net
