@@ -10,3 +10,5 @@
     blog = log --oneline --decorate --all
 [github]
     user = Nullreff
+[core]
+    excludesfile = ~/.gitignore

@@ -2,7 +2,7 @@ from os      import symlink
 from os.path import islink, expanduser, exists
 from shutil  import move
 
-configs = ["vimrc", "xmonad", "xmobarrc", "gitconfig", "conkyrc", "lua"]
+configs = ["vimrc", "xmonad", "xmobarrc", "gitconfig", "gitignore", "conkyrc", "lua"]
 home = expanduser("~")
 
 for config in configs:
