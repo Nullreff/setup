@@ -70,6 +70,6 @@ ${color FFFFFF}${goto 75}${voffset 23}${swapperc}%
 ${color 7DBDD6}${goto 75}Swap
 ${color FFFFFF}${goto 100}${voffset 23}${fs_used_perc /home}%
 ${color 7DBDD6}${goto 100}Disk
-${color FFFFFF}${goto 125}${voffset 25}${downspeed eth0}
-${color FFFFFF}${goto 125}${upspeed eth0}
+${color FFFFFF}${goto 125}${voffset 25}${downspeed wlan0}
+${color FFFFFF}${goto 125}${upspeed wlan0}
 ${color 7DBDD6}${goto 125}Net
