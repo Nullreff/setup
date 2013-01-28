@@ -46,7 +46,7 @@ myManageHook = composeAll
 
 -- Commands used to run external programs
 xmobarCommand = "/usr/bin/xmobar ~/.xmobarrc"
-trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 0 --tint 0x1E0E00 --height 17 --margin 125" 
+trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 0 --tint 0x000000 --height 17 --margin 125" 
 
 -- Union default and new key bindings
 myKeys x  = M.fromList (newKeys x) `M.union` keys defaultConfig x
