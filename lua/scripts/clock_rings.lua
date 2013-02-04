@@ -144,7 +144,7 @@ settings_table = {
     },
     {
         name='fs_used_perc',
-        arg='/',
+        arg='/home',
         max=100,
         bg_colour=0xffffff,
         bg_alpha=0.2,
