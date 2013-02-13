@@ -15,6 +15,12 @@ import XMonad.Actions.MouseGestures
 import qualified XMonad.StackSet as W
 import XMonad.Layout.Named(named)
 
+-- Theme
+primaryColor    = "#7DBDD6"
+secondaryColor  = "#405B80"
+urgetColor      = "#CC040A"
+backgroundColor = "#000000"
+
 main = do
     trproc <- spawnPipe trayerCommand
     xmproc <- spawnPipe xmobarCommand
@@ -32,9 +38,10 @@ main = do
 myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
 
 -- Layouts
-myLayout = avoidStruts $ named "Tabs" simpleTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| Full
+myLayout = avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| Full
     where
         tiled = Tall 1 (3/100) (1/2)
+        myTabbed = tabbed shrinkText myTabTheme
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
@@ -82,11 +89,26 @@ layoutGestures = M.fromList
 
 -- Custom colors for trayer
 myLogHook h = dynamicLogWithPP $ defaultPP 
-    { ppHidden  = xmobarColor "#405B80" ""
-    , ppCurrent = xmobarColor "#7DBDD6" "" . wrap "(" ")"
-    , ppUrgent  = xmobarColor "#7DBDD6" "" . wrap "#" "#"
-    , ppLayout  = xmobarColor "#405B80" "" 
-    , ppTitle   = xmobarColor "#7DBDD6" "" . shorten 83
+    { ppHidden  = xmobarColor secondaryColor ""
+    , ppCurrent = xmobarColor primaryColor   "" . wrap "(" ")"
+    , ppUrgent  = xmobarColor primaryColor   "" . wrap "#" "#"
+    , ppLayout  = xmobarColor secondaryColor "" 
+    , ppTitle   = xmobarColor primaryColor   "" . shorten 83
     , ppSep     = " "
     , ppOutput  = hPutStrLn h 
+    }
+
+-- Custom colors for tabs
+myTabTheme = defaultTheme
+    { activeColor       = backgroundColor
+    , activeBorderColor = primaryColor
+    , activeTextColor   = primaryColor
+
+    , inactiveColor       = backgroundColor
+    , inactiveBorderColor = secondaryColor
+    , inactiveTextColor   = secondaryColor
+
+    , urgentColor       = backgroundColor
+    , urgentBorderColor = urgetColor
+    , urgentTextColor   = urgetColor
     }
