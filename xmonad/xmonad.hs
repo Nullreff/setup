@@ -32,7 +32,7 @@ main = do
 myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
 
 -- Layouts
-myLayout = avoidStruts $ named "Tabbed" simpleTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| Full
+myLayout = avoidStruts $ named "Tabs" simpleTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| Full
     where
         tiled = Tall 1 (3/100) (1/2)
 
@@ -74,7 +74,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
 -- Mouse Gestures
 layoutGestures = M.fromList
-    [ ([L], \_ -> sendMessage $ JumpToLayout "Tabbed")
+    [ ([L], \_ -> sendMessage $ JumpToLayout "Tabs")
     , ([U], \_ -> sendMessage $ JumpToLayout "Tall")
     , ([R], \_ -> sendMessage $ JumpToLayout "Wide")
     , ([D], \_ -> sendMessage $ JumpToLayout "Full")
