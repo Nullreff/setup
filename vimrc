@@ -12,6 +12,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'paradigm/vim-multicursor'
 Bundle 'paradigm/SkyBison'
 Bundle 'mattn/gist-vim'
+Bundle 'AndrewRadev/linediff.vim'
 
 filetype plugin indent on
 syntax enable
