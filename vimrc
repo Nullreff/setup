@@ -30,3 +30,5 @@ set shell=/bin/sh
 "set relativenumber
 
 colorscheme desert
+
+command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
