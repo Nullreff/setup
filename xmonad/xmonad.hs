@@ -2,6 +2,7 @@ import XMonad hiding ( (|||) )
 import XMonad.Layout.LayoutCombinators 
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Actions.WindowGo(runOrRaiseMaster)
@@ -32,6 +33,7 @@ main = do
         , modMask = mod4Mask  -- Rebind Mod to the Meta key
         , keys = myKeys 
         , mouseBindings = myMouseBindings
+        , handleEventHook = fullscreenEventHook
         } 
 
 -- Workspaces
