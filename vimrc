@@ -14,6 +14,7 @@ Bundle 'paradigm/SkyBison'
 Bundle 'mattn/gist-vim'
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'sukima/xmledit'
 
 filetype plugin indent on
 syntax enable
