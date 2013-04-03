@@ -18,6 +18,8 @@ Bundle 'sukima/xmledit'
 Bundle 'tpope/vim-surround'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-scripts/DirDiff.vim'
 
 filetype plugin indent on
 syntax enable
