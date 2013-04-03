@@ -64,6 +64,8 @@ myKeys x  = M.fromList (newKeys x) `M.union` keys defaultConfig x
 newKeys conf@(XConfig {XMonad.modMask = modm}) = 
     [ ((mod4Mask, xK_q),               spawn "killall trayer; xmonad --recompile; xmonad --restart")
     , ((mod4Mask, xK_s),               runOrRaiseMaster "spotify" (className =? "Spotify"))
+    , ((mod4Mask, xK_m),               spawn "minecraft")
+    , ((mod4Mask .|. shiftMask, xK_s), spawn "skype")
     , ((mod4Mask, xK_b),               spawn "chromium")
     , ((mod4Mask, xK_v),               spawn "vlc")
     , ((mod4Mask, xK_f),               spawn "thunar")
