@@ -10,3 +10,6 @@ function update
     sudo apt-get upgrade -y
 end
 
+function format-json
+    python -mjson.tool
+end
