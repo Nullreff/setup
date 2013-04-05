@@ -40,3 +40,4 @@ set background=dark
 colorscheme solarized
 
 command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
+au FileType ruby setl sw=2 sts=2 et
