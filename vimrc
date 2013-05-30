@@ -16,6 +16,7 @@ Bundle 'AndrewRadev/linediff.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'sukima/xmledit'
 Bundle 'tpope/vim-surround'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 syntax enable
@@ -32,6 +33,7 @@ set hlsearch
 set shell=/bin/sh
 "set relativenumber
 
-colorscheme desert
+set background=dark
+colorscheme solarized
 
 command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
