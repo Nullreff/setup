@@ -16,6 +16,7 @@ Bundle 'AndrewRadev/linediff.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'sukima/xmledit'
 Bundle 'tpope/vim-surround'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
