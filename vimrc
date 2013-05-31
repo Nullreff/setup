@@ -37,6 +37,7 @@ set shell=/bin/sh
 "set relativenumber
 
 set background=dark
+let g:solarized_termtrans=1
 colorscheme solarized
 
 command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
