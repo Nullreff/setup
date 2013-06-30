@@ -15,6 +15,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Actions.MouseGestures
 import qualified XMonad.StackSet as W
 import XMonad.Layout.Named(named)
+import XMonad.Hooks.SetWMName
 
 -- Theme
 primaryColor    = "#7DBDD6"
@@ -27,8 +28,9 @@ main = do
     xmproc <- spawnPipe xmobarCommand
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
+        , startupHook = setWMName "LG3D"
         , workspaces = myWorkspaces
-        , layoutHook = myLayout --avoidStruts $ layoutHook defaultConfig
+        , layoutHook = myLayout
         , logHook = myLogHook xmproc
         , modMask = mod4Mask  -- Rebind Mod to the Meta key
         , keys = myKeys 
@@ -40,17 +42,17 @@ main = do
 myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
 
 -- Layouts
-myLayout = avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| Full
+myLayout = avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| noBorders Full
     where
         tiled = Tall 1 (3/100) (1/2)
         myTabbed = tabbed shrinkText myTabTheme
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
-    [ className =? "Gimp"          --> doFloat
-    , className =? "Vncviewer"     --> doFloat
-    , className =? "Xfce4-notifyd" --> doIgnore
-    , isFullscreen                 --> (doF W.focusDown <+> doFullFloat)
+    [ className =? "Gimp"                            --> doFloat
+    , className =? "Vncviewer"                       --> doFloat
+    , className =? "Xfce4-notifyd"                   --> doIgnore
+    , isFullscreen                                   --> (doF W.focusDown <+> doFullFloat)
     ]
 
 -- Commands used to run external programs
