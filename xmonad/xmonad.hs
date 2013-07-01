@@ -45,7 +45,7 @@ myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "co
 myLayout = avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| noBorders Full
     where
         tiled = Tall 1 (3/100) (1/2)
-        myTabbed = tabbed shrinkText myTabTheme
+        myTabbed = noBorders (tabbed shrinkText myTabTheme)
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
