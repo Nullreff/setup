@@ -8,8 +8,6 @@ configs = [
   'xmobarrc', 
   'gitconfig', 
   'gitignore', 
-  'conkyrc', 
-  'lua', 
   'gemrc'
 ]
 
