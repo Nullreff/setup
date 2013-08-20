@@ -49,8 +49,7 @@ myLayout = avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirro
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
-    [ className =? "Gimp"                            --> doFloat
-    , className =? "Vncviewer"                       --> doFloat
+    [ className =? "Vncviewer"                       --> doFloat
     , className =? "Xfce4-notifyd"                   --> doIgnore
     , isFullscreen                                   --> (doF W.focusDown <+> doFullFloat)
     ]
