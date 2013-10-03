@@ -21,6 +21,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'ervandew/supertab'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
 syntax enable
@@ -40,6 +41,10 @@ set shell=/bin/sh
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
+
+" Nerd Tree config
+autocmd vimenter * NERDTree
+map <C-f> :NERDTreeToggle<CR>
 
 command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
 au FileType ruby setl sw=2 sts=2 et
