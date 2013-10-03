@@ -43,7 +43,7 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 " Nerd Tree config
-autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
 map <C-f> :NERDTreeToggle<CR>
 
 command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
