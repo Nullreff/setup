@@ -40,7 +40,9 @@ set shell=/bin/sh
 
 set background=dark
 let g:solarized_termtrans=1
-colorscheme solarized
+if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+    colorscheme solarized
+endif
 
 " Nerd Tree config
 autocmd vimenter * if !argc() | NERDTree | endif
