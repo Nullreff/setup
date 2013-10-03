@@ -1,7 +1,7 @@
 set PATH ~/bin $PATH
 set PATH /opt/vagrant/bin $PATH
-set PATH /opt/idea-IC/bin $PATH
 set PATH ~/.local/share/node/bin $PATH
+
 set fish_greeting ""
 setenv EDITOR vim
 
