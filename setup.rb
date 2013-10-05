@@ -13,8 +13,8 @@ configs = [
 ]
 
 configs.each do |config|
-  home_file = File.join(Dir.home, '.' + config)
-  config_file = File.join(Dir.home, '.config', config)
+  home_file = File.expand_path("~/.#{config}")
+  config_file = File.expand_path("~/.config/#{config}")
 
   if File.symlink?(home_file)
     puts "#{config}: Already linked"
