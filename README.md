@@ -6,7 +6,7 @@ These are the custom configuration files used to run my computer.  They primaral
 Installing
 ----------
 
-Clone this into your `.config` folder and run the ruby script `setlinks.rb`.
+Clone this into your `.config` folder and run the ruby script `setup.rb`.
 
 Software
 --------
