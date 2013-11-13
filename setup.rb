@@ -9,7 +9,8 @@ configs = [
   'xmobarrc',
   'gitconfig',
   'gitignore',
-  'gemrc'
+  'gemrc',
+  'railsrc'
 ]
 
 configs.each do |config|
