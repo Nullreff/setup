@@ -18,8 +18,8 @@ import XMonad.Layout.Named(named)
 import XMonad.Hooks.SetWMName
 
 -- Theme
-primaryColor    = "#7DBDD6"
-secondaryColor  = "#405B80"
+primaryColor    = "#E0AE73"
+secondaryColor  = "#AC6C3C"
 urgetColor      = "#CC040A"
 backgroundColor = "#000000"
 
