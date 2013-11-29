@@ -2,3 +2,4 @@
 *.patch
 *.iml
 .idea/
+*.sln.ide/
