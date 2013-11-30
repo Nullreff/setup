@@ -10,7 +10,8 @@ configs = [
   'gitconfig',
   'gitignore',
   'gemrc',
-  'railsrc'
+  'railsrc',
+  'ackrc'
 ]
 
 configs.each do |config|

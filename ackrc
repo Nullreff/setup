@@ -1,0 +1,17 @@
+# General
+--color
+--smart-case
+--follow
+ 
+# JS
+--type-set=coffee:ext:coffee
+
+# Ruby
+--type-add=ruby:ext:haml,rselm,feature,ru,lock
+ 
+# .NET
+--ignore-dir=packages
+--ignore-dir=bin
+--ignore-dir=obj
+--type-add=html:ext:cshtml
+--type-add=csharp:ext:cshtml
