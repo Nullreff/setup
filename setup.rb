@@ -2,19 +2,34 @@
 
 require 'fileutils'
 
-# Link config files
-configs = [
-  'vimrc',
-  'xmonad',
-  'xmobarrc',
-  'gitconfig',
-  'gitignore',
-  'gemrc',
-  'railsrc',
-  'ackrc'
-]
+CONFIGS = %w(
+  vimrc
+  xmonad
+  xmobarrc
+  gitconfig
+  gitignore
+  gemrc
+  railsrc
+  ackrc
+)
 
-configs.each do |config|
+SOFTWARE = {
+  'apt-get' => %w(
+    xmonad
+    xmobar
+    trayer
+    fish
+    vim
+    ruby
+  ),
+
+  'cpan' => %w(
+    App::Ack
+  )
+}
+
+# Link config files
+CONFIGS.each do |config|
   home_file = File.expand_path("~/.#{config}")
   config_file = File.expand_path("~/.config/#{config}")
 
@@ -33,6 +48,11 @@ configs.each do |config|
   else
     puts "#{config}: Couldn't find file at the path '#{home_file}"
   end
+end
+
+# Install software
+SOFTWARE.each do |installer, programs|
+  system "sudo #{installer} install #{programs.join(' ')}"
 end
 
 # Install vim plugins
