@@ -46,7 +46,7 @@ CONFIGS.each do |config|
     puts "#{config}: Set link to existing file in .config"
 
   else
-    puts "#{config}: Couldn't find file at the path '#{home_file}"
+    puts "#{config}: Couldn't find file at the path '#{home_file}'"
   end
 end
 
