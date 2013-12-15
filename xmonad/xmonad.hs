@@ -22,6 +22,8 @@ primaryColor    = "#E0AE73"
 secondaryColor  = "#AC6C3C"
 urgetColor      = "#CC040A"
 backgroundColor = "#000000"
+myNormalBorderColor = "black"
+myFocusedBorderColor = "tan"
 
 main = do
     trproc <- spawnPipe trayerCommand
@@ -36,6 +38,8 @@ main = do
         , keys = myKeys 
         , mouseBindings = myMouseBindings
         , handleEventHook = fullscreenEventHook
+        , normalBorderColor = myNormalBorderColor
+        , focusedBorderColor = myFocusedBorderColor
         } 
 
 -- Workspaces
