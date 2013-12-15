@@ -23,6 +23,7 @@ Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'mattn/emmet-vim'
 
 filetype plugin indent on
 syntax enable
