@@ -6,8 +6,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'jonathanfilip/vim-lucius'
-Bundle 'lukerandall/haskellmode-vim'
-Bundle 'eagletmt/ghcmod-vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'paradigm/SkyBison'
