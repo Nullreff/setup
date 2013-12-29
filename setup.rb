@@ -11,6 +11,7 @@ CONFIGS = %w(
   gemrc
   railsrc
   ackrc
+  ls++.conf
 )
 
 SOFTWARE = {

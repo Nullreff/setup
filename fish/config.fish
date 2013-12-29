@@ -13,3 +13,5 @@ end
 function format-json
     python -mjson.tool
 end
+
+alias ls=ls++
