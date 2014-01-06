@@ -18,5 +18,6 @@ In addition to what comes with CrunchBang, I use the following programs:
 * [trayer](http://www.ohloh.net/p/trayer)
 * [fish](http://fishshell.com/)
 * [vim](http://www.vim.org/)
+* [ls++](https://github.com/trapd00r/ls--)
 * [smxi](http://crunchbang.org/forums/viewtopic.php?id=22740)
 * [liquorix](http://liquorix.net/)
