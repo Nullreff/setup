@@ -26,6 +26,14 @@ SOFTWARE = {
 
   'cpan' => %w(
     App::Ack
+  ),
+
+  'gem' => %w(
+    rake
+    bundler
+    rails
+    middleman
+    jekyll
   )
 }
 
