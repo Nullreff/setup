@@ -16,6 +16,7 @@ import XMonad.Actions.MouseGestures
 import qualified XMonad.StackSet as W
 import XMonad.Layout.Named(named)
 import XMonad.Hooks.SetWMName
+import XMonad.Layout.ThreeColumns
 
 -- Theme
 primaryColor    = "#E0AE73"
@@ -46,10 +47,11 @@ main = do
 myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
 
 -- Layouts
-myLayout = lessBorders OnlyFloat $ avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| noBorders Full
+myLayout = lessBorders OnlyFloat $ avoidStruts $ named "Tabs" myTabbed ||| tiled ||| named "Wide" (Mirror tiled) ||| named "Vert" myColumns ||| noBorders Full
     where
         tiled = Tall 1 (3/100) (1/2)
         myTabbed = noBorders (tabbed shrinkText myTabTheme)
+        myColumns = ThreeCol 1 (3/100) (1/2)
 
 -- Float gimp and vncviewer
 myManageHook = composeAll
