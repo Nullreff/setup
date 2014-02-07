@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Change this to whatever driver your tablet runs on
+TABLET_ID=`xinput list --id-only "UC-LOGIC TWA60"`
+
+# [right-monitor width] / [right-monitor width + left-monitor width] 
+SCREEN_RATIO=0.555
+
+# Detach from the mouse cursor
+xinput float $TABLET_ID
+
+# Forces it to only run on the main monitor
+if `xrandr | grep "DP1 connected"`; then
+  xinput set-prop $TABLET_ID --type=float "Coordinate Transformation Matrix" $SCREEN_RATIO 0 0 0 1 0 0 0 1
+fi
