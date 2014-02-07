@@ -22,6 +22,7 @@ Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/emmet-vim'
+Bundle 'wting/rust.vim'
 
 filetype plugin indent on
 syntax enable
