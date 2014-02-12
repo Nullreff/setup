@@ -16,7 +16,7 @@
     scroll_on_output = False
     show_titlebar = False
     color_scheme = custom
-    font = Monospace 10
+    font = Droid Sans Mono 11
     background_color = "#2e3436"
     scrollback_infinite = True
   [[solarized-dark]]
@@ -31,7 +31,7 @@
     scroll_on_output = False
     show_titlebar = False
     color_scheme = custom
-    font = Monospace 10
+    font = Droid Sans Mono 11
     background_color = "#002b36"
     scrollback_infinite = True
   [[solarized-light]]
@@ -46,7 +46,7 @@
     scroll_on_output = False
     show_titlebar = False
     color_scheme = custom
-    font = Monospace 10
+    font = Droid Sans Mono 11
     background_color = "#2e3436"
     scrollback_infinite = True
 [layouts]

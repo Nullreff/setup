@@ -28,6 +28,7 @@ filetype plugin indent on
 syntax enable
 
 set guioptions=
+set guifont=Droid\ Sans\ Mono\ 11
 
 set tabstop=4
 set shiftwidth=4
