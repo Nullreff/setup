@@ -21,3 +21,4 @@ In addition to what comes with CrunchBang, I use the following programs:
 * [ls++](https://github.com/trapd00r/ls--)
 * [smxi](http://crunchbang.org/forums/viewtopic.php?id=22740)
 * [liquorix](http://liquorix.net/)
+* [systemd](https://wiki.debian.org/systemd)
