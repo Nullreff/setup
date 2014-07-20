@@ -45,33 +45,41 @@ main = do
         } 
 
 -- Workspaces
-myWorkspaces = map show [1..9] --["web", "docs", "server", "code4", "code5", "code6", "code7", "music", "chat" ] 
+myWorkspaces = map show [1..9]
 
 -- Layouts
-myLayout = lessBorders OnlyFloat $ avoidStruts $ named "Tabs" myTabbed ||| named "Tall" tiled ||| named "Wide" wide ||| named "Vert" myColumns ||| noBorders Full
+myLayout = lessBorders OnlyFloat $ avoidStruts $ named "Tabs" myTabbed
+                                             ||| named "Tall" tiled
+                                             ||| named "Wide" wide
+                                             ||| named "Vert" myColumns
+                                             ||| named "Full" noBorders Full
     where
         wide = Mirror tiled
         tiled = spacing 3 $ Tall 1 (3/100) (1/2)
         myTabbed = noBorders (tabbed shrinkText myTabTheme)
         myColumns = ThreeCol 1 (3/100) (1/2)
 
--- Float gimp and vncviewer
+-- Window floating and fullscreen
 myManageHook = composeAll
-    [ className =? "Vncviewer"                       --> doFloat
-    , className =? "Xfce4-notifyd"                   --> doIgnore
-    , isFullscreen                                   --> (doF W.focusDown <+> doFullFloat)
+    [ className =? "Vncviewer"     --> doFloat
+    , className =? "Xfce4-notifyd" --> doIgnore
+    , isFullscreen                 --> (doF W.focusDown <+> doFullFloat)
     ]
 
 -- Commands used to run external programs
 xmobarCommand = "/usr/bin/xmobar ~/.xmobarrc"
-trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 0 --tint 0x000000 --height 17 --margin 125" 
+trayerCommand = "/usr/bin/trayer --edge top --align right --SetDockType true \
+                \--SetPartialStrut false --expand true --widthtype request \
+                \--transparent true --alpha 0 --tint 0x000000 --height 17 \
+                \--margin 125"
+restartCommand = "killall trayer; xmonad --recompile; xmonad --restart"
 
 -- Union default and new key bindings
 myKeys x  = M.fromList (newKeys x) `M.union` keys defaultConfig x
 
 -- Add new and/or redefine key bindings
 newKeys conf@(XConfig {XMonad.modMask = modm}) = 
-    [ ((mod4Mask, xK_q),               spawn "killall trayer; xmonad --recompile; xmonad --restart")
+    [ ((mod4Mask, xK_q),               spawn restartCommand)
     , ((mod4Mask, xK_s),               runOrRaiseMaster "spotify" (className =? "Spotify"))
     , ((mod4Mask, xK_m),               spawn "minecraft")
     , ((mod4Mask .|. shiftMask, xK_s), spawn "skype")
