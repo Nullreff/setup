@@ -52,7 +52,7 @@ myLayout = lessBorders OnlyFloat $ avoidStruts $ named "Tabs" myTabbed
                                              ||| named "Tall" tiled
                                              ||| named "Wide" wide
                                              ||| named "Vert" myColumns
-                                             ||| named "Full" noBorders Full
+                                             ||| noBorders Full
     where
         wide = Mirror tiled
         tiled = spacing 3 $ Tall 1 (3/100) (1/2)
