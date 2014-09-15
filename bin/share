@@ -1,13 +1,13 @@
 #!/bin/bash
-# This script uploads a list of files to a server
-# and then prints their urls for sharing.
+# Uploads a list of files to a server and prints their urls for sharing.
 
 UPLOAD_PATH="webfaction:~/webapps/files_nullreff_net/"
 URL_PATH="http://files.nullreff.net"
 
-scp "$@" $UPLOAD_PATH
-echo "---"
+echo "Uploading $# file(s)..."
+rsync -rcuP --chmod=u+rw,g+r,o+r "$@" $UPLOAD_PATH || exit
+echo '=== Links ==='
 for FILE in "$@"; do
-    URL_NAME=`echo $FILE | perl -p -e 's/([^A-Za-z0-9\.\-_\r\n])/sprintf("%%%02X", ord($1))/seg'`
-    echo "$URL_PATH/$URL_NAME"
+    echo "$URL_PATH/`basename $FILE | perl -p -e \
+          's/([^A-Za-z0-9\.\-_\r\n])/sprintf("%%%02X", ord($1))/seg'`"
 done
