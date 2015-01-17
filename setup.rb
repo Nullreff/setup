@@ -22,6 +22,7 @@ SOFTWARE = {
     fish
     vim
     ruby
+    git
   ),
 
   'cpan' => %w(
@@ -31,9 +32,6 @@ SOFTWARE = {
   'gem' => %w(
     rake
     bundler
-    rails
-    middleman
-    jekyll
   )
 }
 
