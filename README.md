@@ -1,12 +1,14 @@
 Nullreff's .config files
 ========================
 
-These are the custom configuration files used to run my computer.  They primarally are intended to be used on [CrunchBang Linux](http://crunchbang.org/) but should work on any OS.
+These are the custom configuration files used to run my computer.
+They primarally are intended to be used on [CrunchBang Linux](http://crunchbang.org/) but should work on any OS.
 
 Installing
 ----------
 
 Clone this into your `.config` folder and run the ruby script `setup.rb`.
+If you want to use xmonad, copy `bin/xmonad-autostart` and `bin/xmonad-session` to the right places (listed in the files themselves).
 
 Software
 --------
