@@ -1,9 +1,6 @@
 #!/bin/bash
 # Copy to /usr/lib/xmonad/xmonad-autostart
 
-## Set root window colour
-#hsetroot -solid "#2E3436" &
-
 ## Restore wallpaper
 nitrogen --restore
 
@@ -12,19 +9,6 @@ eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
 ## Set Cursor
 xsetroot -cursor_name left_ptr &
-
-## Group start:
-## 1. nitrogen - restores wallpaper
-## 2. compositor - start
-## 3. sleep - give compositor time to start
-## 4. conky
-## 5. tint2 panel
-#(\
-#nitrogen --restore && \
-#cb-compositor --start && \
-#sleep 2s && \
-#conky -q && \
-#) &
 
 ## Volume control for systray
 (sleep 2s && pnmixer) &
@@ -59,3 +43,4 @@ xset r rate 250 25 &
 
 ## Turn on/off system beep
 xset b off &
+
