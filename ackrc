@@ -15,3 +15,6 @@
 --ignore-dir=obj
 --type-add=html:ext:cshtml
 --type-add=csharp:ext:cshtml
+
+# Java
+--ignore-dir=target
