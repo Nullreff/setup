@@ -23,6 +23,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/emmet-vim'
 Bundle 'wting/rust.vim'
+Bundle 'maksimr/vim-jsbeautify'
 
 filetype plugin indent on
 syntax enable
