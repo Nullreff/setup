@@ -63,6 +63,10 @@ myLayout = lessBorders OnlyFloat $ avoidStruts $ named "Tabs" myTabbed
 myManageHook = composeAll
     [ className =? "Vncviewer"     --> doFloat
     , className =? "Xfce4-notifyd" --> doIgnore
+    , className =? "Steam" --> doFloat
+    , className =? "steam" --> doFullFloat -- bigpicture-mode
+    , className =? "MainThrd" --> doFloat
+    , title =? "plasma-desktop" --> doIgnore
     , isFullscreen                 --> (doF W.focusDown <+> doFullFloat)
     ]
 
