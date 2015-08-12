@@ -24,6 +24,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mattn/emmet-vim'
 Bundle 'wting/rust.vim'
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'mxw/vim-jsx'
 
 filetype plugin indent on
 syntax enable
