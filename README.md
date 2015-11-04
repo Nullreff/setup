@@ -24,3 +24,13 @@ In addition to what comes with CrunchBang, I use the following programs:
 * [smxi](http://crunchbang.org/forums/viewtopic.php?id=22740)
 * [liquorix](http://liquorix.net/)
 * [systemd](https://wiki.debian.org/systemd)
+
+DisplayLink
+-----------
+
+~~~bash
+echo "blacklist udlfb" | sudo tee /etc/modprobe.d/blacklist-framebuffer.conf
+~~~
+
+http://displaylink.org/forum/showthread.php?t=64043
+
