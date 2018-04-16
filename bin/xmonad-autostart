@@ -1,6 +1,9 @@
 #!/bin/bash
 # Copy to /usr/lib/xmonad/xmonad-autostart
 
+## Set resolution
+xrandr --output eDP1 --mode 1920x1080
+
 ## Restore wallpaper
 nitrogen --restore
 
@@ -43,4 +46,7 @@ xset r rate 250 25 &
 
 ## Turn on/off system beep
 xset b off &
+
+## Gestures
+touchegg &
 
