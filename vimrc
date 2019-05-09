@@ -24,13 +24,16 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mattn/emmet-vim'
 Bundle 'wting/rust.vim'
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
+Bundle 'leafo/moonscript-vim'
+Bundle 'chaimleib/vim-renpy'
+Bundle 'ElmCast/elm-vim'
 
 filetype plugin indent on
 syntax enable
 
 set guioptions=
-set guifont=Droid\ Sans\ Mono\ 11
 
 set tabstop=4
 set shiftwidth=4
