@@ -91,12 +91,13 @@ myKeys x  = M.fromList (newKeys x) `M.union` keys defaultConfig x
 -- Add new and/or redefine key bindings
 newKeys conf@(XConfig {XMonad.modMask = modm}) = 
     [ ((mod4Mask, xK_q),               spawn restartCommand)
-    , ((mod4Mask, xK_s),               runOrRaiseMaster "spotify" (className =? "Spotify"))
     , ((mod4Mask, xK_m),               spawn "minecraft")
-    , ((mod4Mask .|. shiftMask, xK_s), spawn "skype")
     , ((mod4Mask, xK_b),               spawn "firefox")
     , ((mod4Mask, xK_v),               spawn "vlc")
     , ((mod4Mask, xK_f),               spawn "thunar")
+    , ((mod4Mask, xK_d),               spawn "deadbeef")
+    , ((mod4Mask, xK_g),               spawn "telegram")
+    , ((mod4Mask, xK_s),               spawn "steam")
     , ((mod4Mask, xK_Escape),          spawn "cb-exit")
     , ((mod4Mask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
     , ((controlMask, xK_Print),        spawn "sleep 0.2; scrot -s")
