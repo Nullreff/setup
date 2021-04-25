@@ -34,3 +34,30 @@ echo "blacklist udlfb" | sudo tee /etc/modprobe.d/blacklist-framebuffer.conf
 
 http://displaylink.org/forum/showthread.php?t=64043
 
+Firefox
+-------
+
+
+### Addons
+
+* [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv/)
+* [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
+* [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)
+* [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
+* [Greasemonky](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+* [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
+* [Privacy.com](https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/)
+* [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
+* [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/)
+* [Tree Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-tabs/)
+* [TTV ad-block](https://addons.mozilla.org/en-US/firefox/addon/ttv-adblock/)
+* [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+
+### Customizations
+
+* Hide the tabs at the top since I use Tree Tabs [https://superuser.com/a/1268734](https://superuser.com/a/1268734)
+* Install the ivory-dark theme for Tree Tabs, it can be found under `files/ivory-dark.tt_theme`
+* Disable everything under "Logins and Passwords" and "Forms and Autofill" since Bitwarden handles it for me
+* Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same
+* Add the rules from `files/youtube-recommended-block.txt` to uBlock origin
+
