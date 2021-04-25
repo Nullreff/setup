@@ -61,4 +61,5 @@ Firefox
 * Disable everything under "Logins and Passwords" and "Forms and Autofill" since Bitwarden handles it for me
 * Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same
 * Add the rules from `files/youtube-recommended-block.txt` to uBlock origin
+* Change default search engine to DuckDuckGo
 
