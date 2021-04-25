@@ -2,7 +2,7 @@ Nullreff's .config files
 ========================
 
 These are the custom configuration files used to run my computer.
-They primarally are intended to be used on [CrunchBang Linux](http://crunchbang.org/) but should work on any OS.
+They primarally are intended to be used on [Debian](https://www.debian.org/) but should work on any OS.
 
 Installing
 ----------
@@ -13,8 +13,10 @@ If you want to use xmonad, copy `bin/xmonad-autostart` and `bin/xmonad-session` 
 Software
 --------
 
-In addition to what comes with CrunchBang, I use the following programs:
+This is kind of out of date, want to update to something more like https://github.com/Axarva/dotfiles-2.0
+In addition to what comes with Debian, I use the following programs:
 
+* [htop](https://htop.dev/)
 * [xmonad](http://xmonad.org/)
 * [xmobar](http://projects.haskell.org/xmobar/)
 * [trayer](http://www.ohloh.net/p/trayer)
@@ -23,7 +25,6 @@ In addition to what comes with CrunchBang, I use the following programs:
 * [ls++](https://github.com/trapd00r/ls--)
 * [smxi](http://crunchbang.org/forums/viewtopic.php?id=22740)
 * [liquorix](http://liquorix.net/)
-* [systemd](https://wiki.debian.org/systemd)
 
 DisplayLink
 -----------

@@ -1,17 +1,3 @@
 [user]
-    name = Ryan Mendivil
-    email = ryan@nullreff.net
-[alias]
-    meld = /home/ryan/bin/git-meld/git-meld.pl
-[color]
-    ui = true
-[alias]
-    tree = log --graph --full-history --all --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
-    blog = log --oneline --decorate --all
-[github]
-    user = Nullreff
-[core]
-    excludesfile = ~/.gitignore
-	whitespace = cr-at-eol
-[push]
-	default = simple
+	email = git@nullreff.net
+	name = Nullreff
