@@ -3,6 +3,7 @@ Nullreff's .config files
 
 These are the custom configuration files used to run my computer.
 They primarally are intended to be used on [Debian](https://www.debian.org/) but should work on any OS.
+For my hardware linux installs I try to run [an encrypted BTRFS volume](https://www.paritybit.ca/blog/debian-with-btrfs).
 
 Installing
 ----------
