@@ -27,6 +27,7 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 
 * [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv/)
 * [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
+* [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/)
 * [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)
 * [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 * [Greasemonky](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
