@@ -2,6 +2,9 @@ Nullreff's .config files
 ========================
 
 These are the custom configuration files used to run my computer.
+They're very specific to my own setup but feel free to draw inspiration or copy them to your own setup.
+As much as I try to automate, not everything can be automatically setup across multiple operating systems and machines.
+Therefore this readme contains all the documentation for how I configure my machines.
 
 Installing
 ----------
