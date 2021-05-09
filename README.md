@@ -19,6 +19,26 @@ For my hardware linux installs I try to run [an encrypted BTRFS volume](https://
 currently working on setting it up to work with a Yubikey.
 For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers just use the stock kernel.
 
+### Files
+
+I use [Rclone](https://rclone.org/) for keeping my files in sync across different devices.
+For phone I use [RCX](https://github.com/x0b/rcx) for file access.
+My rclone.conf is encrypted and stored in Bitwarden to sync across multiple machines.
+
+#### Win/Mac/Linux Setup
+
+1. [Download Rclone](https://rclone.org/downloads/) 
+2. If you're on windows, also install [winfsp](https://github.com/billziss-gh/winfsp/releases)
+3. Download the Rclone config from Bitwarden and copy it to `~/.config/rclone/rclone.conf`
+4. If you don't want to have to enter the password, set the env variable `RCLONE_CONFIG_PASS`
+5. Launch the GUI with `rclone rcd --rc-web-gui` or start running commands
+
+#### Android Setup
+
+1. [Install RCX](https://play.google.com/store/apps/details?id=io.github.x0b.rcx&hl=en)
+2. Download the Rclone config from Bitwarden and import it to the app
+3. Open the remotes apps will access and serve them as webdav
+
 ### Browser
 
 I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) on desktop and Firefox Quantum on mobile.
