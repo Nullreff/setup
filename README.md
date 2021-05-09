@@ -35,7 +35,7 @@ It also means I can encrypt all my files locally before uploading them so only I
 #### Win/Mac/Linux Setup
 
 1. [Download Rclone](https://rclone.org/downloads/) 
-2. If you're on windows, also install [winfsp](https://github.com/billziss-gh/winfsp/releases)
+2. If you're on windows, also install [winfsp](https://github.com/billziss-gh/winfsp/releases) or on linux install `fuse`
 3. Download the Rclone config from Bitwarden and copy it to `~/.config/rclone/rclone.conf`
 4. If you don't want to have to enter the password, set the env variable `RCLONE_CONFIG_PASS`
 5. Launch the GUI with `rclone rcd --rc-web-gui` or start running commands
