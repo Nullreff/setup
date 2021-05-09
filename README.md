@@ -25,8 +25,12 @@ For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers jus
 ### Files
 
 I use [Rclone](https://rclone.org/) for keeping my files in sync across different devices.
-For phone I use [RCX](https://github.com/x0b/rcx) for file access.
+For mobile I use [RCX](https://github.com/x0b/rcx) for file access.
 My rclone.conf is encrypted and stored in Bitwarden to sync across multiple machines.
+
+This includes stuff like SSH/FTP access to servers as well as cloud storage.
+The advantage of this is decoupling storage from applications so that I'm not stuck to any single provider.
+It also means I can encrypt all my files locally before uploading them so only I have access to them.
 
 #### Win/Mac/Linux Setup
 
@@ -36,9 +40,9 @@ My rclone.conf is encrypted and stored in Bitwarden to sync across multiple mach
 4. If you don't want to have to enter the password, set the env variable `RCLONE_CONFIG_PASS`
 5. Launch the GUI with `rclone rcd --rc-web-gui` or start running commands
 
-#### Android Setup
+#### Mobile Setup
 
-1. [Install RCX](https://play.google.com/store/apps/details?id=io.github.x0b.rcx&hl=en)
+1. [Install RCX](https://f-droid.org/en/packages/io.github.x0b.rcx/)
 2. Download the Rclone config from Bitwarden and import it to the app
 3. Open the remotes apps will access and serve them as webdav
 
