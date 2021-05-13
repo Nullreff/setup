@@ -57,6 +57,7 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/)
 * [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)
 * [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
+* [Fraidycat](https://addons.mozilla.org/en-US/firefox/addon/fraidycat/)
 * [Greasemonky](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 * [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
 * [Privacy.com](https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/)
