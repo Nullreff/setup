@@ -75,6 +75,7 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same
 * Add the rules from `files/youtube-recommended-block.txt` in this repo to uBlock origin
 * Change default search engine to DuckDuckGo
+* In `about:config` change `reader.color_scheme` to `dark`
 
 ### Notes
 
