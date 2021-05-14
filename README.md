@@ -33,6 +33,8 @@ git
 nssm
 rclone
 naps2
+bitwarden
+bitwarden-cli
 ```
 
 
