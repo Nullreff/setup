@@ -55,7 +55,7 @@ It also means I can encrypt all my files locally before uploading them so only I
 3. `nssm install rclone_mount`
   * Path: `C:\ProgramData\chocolatey\bin\rclone.exe`
   * Arguments: `mount --vfs-cache-mode full --cache-dir D:\cache\rclone  --log-file D:\cache\rclone\remote.log --volname remote gdrive_encrypted:/ R:`
-  * Environment: `RCLONE_CONFIG_PASS=<password from bitwarden` TODO: Store this in a more secure way
+  * Environment: `RCLONE_CONFIG_PASS=<password from bitwarden>` TODO: Store this in a more secure way
 
 If you want to play around with it, launch the GUI with `rclone rcd --rc-web-gui` or start running `rclone` commands
 
