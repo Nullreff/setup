@@ -35,6 +35,7 @@ rclone
 naps2
 bitwarden
 bitwarden-cli
+vlc
 ```
 
 
