@@ -22,6 +22,20 @@ For my hardware linux installs I try to run [an encrypted BTRFS volume](https://
 currently working on setting it up to work with a Yubikey.
 For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers just use the stock kernel.
 
+#### Windows Chocolaty Packages
+
+```
+chromium
+firefox
+curl
+emacs
+git
+nssm
+rclone
+naps2
+```
+
+
 ### Files
 
 I use [Rclone](https://rclone.org/) for keeping my files in sync across different devices.
@@ -55,6 +69,7 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv/)
 * [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
 * [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/)
+* [Custom Bang Search](https://addons.mozilla.org/en-US/firefox/addon/custombangsearch/)
 * [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)
 * [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 * [Fraidycat](https://addons.mozilla.org/en-US/firefox/addon/fraidycat/)
