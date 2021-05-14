@@ -48,13 +48,16 @@ This includes stuff like SSH/FTP access to servers as well as cloud storage.
 The advantage of this is decoupling storage from applications so that I'm not stuck to any single provider.
 It also means I can encrypt all my files locally before uploading them so only I have access to them.
 
-#### Win/Mac/Linux Setup
+#### Windows
 
-1. [Download Rclone](https://rclone.org/downloads/) 
-2. If you're on windows, also install [winfsp](https://github.com/billziss-gh/winfsp/releases) or on linux install `fuse`
-3. Download the Rclone config from Bitwarden and copy it to `~/.config/rclone/rclone.conf`
-4. If you don't want to have to enter the password, set the env variable `RCLONE_CONFIG_PASS`
-5. Launch the GUI with `rclone rcd --rc-web-gui` or start running commands
+1. `choco install rclone nssm winfsp`
+2. Download the Rclone config from Bitwarden and copy it to `C:\WINDOWS\system32\config\systemprofile\.config\rclone\rclone.conf`
+3. `nssm install rclone_mount`
+  * Path: `C:\ProgramData\chocolatey\bin\rclone.exe`
+  * Arguments: `mount --vfs-cache-mode full --cache-dir D:\cache\rclone  --log-file D:\cache\rclone\remote.log --volname remote gdrive_encrypted:/ R:`
+  * Environment: `RCLONE_CONFIG_PASS=<password from bitwarden` TODO: Store this in a more secure way
+
+If you want to play around with it, launch the GUI with `rclone rcd --rc-web-gui` or start running `rclone` commands
 
 #### Mobile Setup
 
