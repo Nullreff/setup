@@ -81,6 +81,7 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 * [Fraidycat](https://addons.mozilla.org/en-US/firefox/addon/fraidycat/)
 * [Greasemonky](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+* [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/)
 * [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
 * [Privacy.com](https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/)
 * [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
