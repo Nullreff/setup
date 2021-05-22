@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo apt-get install grep tr
+sudo apt-get install $(grep -vE "^\s*#" filename  | tr "\n" " ")
