@@ -34,3 +34,4 @@ swayidle
 swaylock
 foot
 dmenu
+waybar
