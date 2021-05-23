@@ -26,3 +26,4 @@ vim
 wget
 firmware-linux
 intel-microcode
+snapd
