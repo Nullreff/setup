@@ -31,3 +31,5 @@ sway
 swaybg
 swayidle
 swaylock
+foot
+dmenu
