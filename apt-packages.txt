@@ -24,3 +24,5 @@ silversearcher-ag
 tree
 vim
 wget
+firmware-linux
+intel-microcode
