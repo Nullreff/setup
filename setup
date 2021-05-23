@@ -1,3 +1,6 @@
 #!/bin/bash
+sudo cp ~/.config/files/sources.list /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get dist-upgrade -y
 sudo apt-get install -y grep
 sudo apt-get install -y $(grep -vE "^\s*#" apt-packages.txt  | tr "\n" " ")
