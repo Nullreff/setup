@@ -4,36 +4,11 @@ require 'fileutils'
 
 CONFIGS = %w(
   vimrc
-  xmonad
-  xmobarrc
   gitconfig
   gitignore
   gemrc
-  railsrc
   ackrc
-  ls++.conf
 )
-
-SOFTWARE = {
-  'apt-get' => %w(
-    xmonad
-    xmobar
-    trayer
-    fish
-    vim
-    ruby
-    git
-  ),
-
-  'cpan' => %w(
-    App::Ack
-  ),
-
-  'gem' => %w(
-    rake
-    bundler
-  )
-}
 
 # Link config files
 CONFIGS.each do |config|
@@ -55,11 +30,6 @@ CONFIGS.each do |config|
   else
     puts "#{config}: Couldn't find file at the path '#{home_file}'"
   end
-end
-
-# Install software
-SOFTWARE.each do |installer, programs|
-  system "sudo #{installer} install #{programs.join(' ')}"
 end
 
 # Install vim plugins
