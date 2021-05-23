@@ -5,30 +5,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'jonathanfilip/vim-lucius'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'paradigm/SkyBison'
-Bundle 'mattn/gist-vim'
-Bundle 'AndrewRadev/linediff.vim'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'sukima/xmledit'
-Bundle 'tpope/vim-surround'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-scripts/DirDiff.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'mattn/emmet-vim'
-Bundle 'wting/rust.vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'pangloss/vim-javascript'
-Bundle 'mxw/vim-jsx'
-Bundle 'leafo/moonscript-vim'
-Bundle 'chaimleib/vim-renpy'
-Bundle 'ElmCast/elm-vim'
+Bundle 'terryma/vim-multiple-cursors'
+Plugin 'dracula/vim', {'name': 'dracula'}
 
 filetype plugin indent on
 syntax enable
@@ -43,21 +25,15 @@ set hidden
 set virtualedit=block
 set hlsearch
 set shell=/bin/sh
-"set relativenumber
 
 set background=dark
-let g:solarized_termtrans=1
-if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-    colorscheme solarized
+if filereadable(expand("~/.vim/bundle/dracula/colors/dracula.vim"))
+    colorscheme dracula
 endif
 
 " Nerd Tree config
 autocmd vimenter * if !argc() | NERDTree | endif
 map <C-f> :NERDTreeToggle<CR>
-
-command FormatTag :normal ^Whr<CR>:s/" /"\r/g<CR>V/><CR>=
-au FileType ruby setl sw=2 sts=2 et
-au FileType puppet setl sw=2 sts=2 et
 
 " Tab between buffers
 :map <C-tab> :bp<cr>
