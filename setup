@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 cd ~/.config/
 sudo cp files/sources.list /etc/apt/sources.list
 sudo apt-get update
@@ -7,3 +7,4 @@ sudo apt-get install -y grep
 sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 sudo snap install $(grep -vE "^\s*#" packages/snap.txt  | tr "\n" " ")
 ./bin/link-configs
+./bin/install-ly

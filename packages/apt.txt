@@ -27,3 +27,7 @@ wget
 firmware-linux
 intel-microcode
 snapd
+sway
+swaybg
+swayidle
+swaylock

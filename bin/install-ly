@@ -1,0 +1,10 @@
+#!/bin/bash -e
+sudo apt-get install -y build-essential libpam0g-dev libxcb-xkb-dev
+mkdir -p ~/src/
+git clone https://github.com/nullgemm/ly.git ~/src/ly/
+cd ~/src/ly/
+make github
+make
+sudo make install
+sudo systemctl enable ly.service
+sudo systemctl disable getty@tty3.service
