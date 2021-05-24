@@ -15,6 +15,7 @@ imagemagick
 jq
 make
 mosh
+python
 python3
 python3-pip
 rake
