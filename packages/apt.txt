@@ -37,3 +37,5 @@ swaylock
 foot
 dmenu
 waybar
+mpv
+youtube-dl
