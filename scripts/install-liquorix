@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+mkdir -p /etc/apt/{sources.list.d,trusted.gpg.d}
+sudo apt-get install -y curl apt-transport-https
+
+curl https://liquorix.net/liquorix-keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/liquorix-keyring.gpg > /dev/null
+
+sudo cp files/liquorix.list /etc/apt/sources.list.d/liquorix.list
+
+sudo apt-get update
+sudo apt-get install -y linux-image-liquorix-amd64 linux-headers-liquorix-amd64
+
+echo "Installed liquorix kernel"

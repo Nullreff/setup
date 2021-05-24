@@ -16,3 +16,4 @@ sudo snap install $(grep -vE "^\s*#" packages/snap.txt  | tr "\n" " ")
 # Some software we have to build or install using a script
 ./scripts/install-ly
 ./scripts/install-firefox-developer-edition
+./scripts/install-liquorix
