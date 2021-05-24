@@ -11,8 +11,8 @@ sudo apt-get install -y grep
 # Most software we can install using package managers
 sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 sudo snap install $(grep -vE "^\s*#" packages/snap.txt  | tr "\n" " ")
-./bin/link-configs
+./scripts/link-configs
 
 # Some software we have to build or install using a script
-./bin/install-ly
-./bin/install-firefox-developer-edition
+./scripts/install-ly
+./scripts/install-firefox-developer-edition

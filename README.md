@@ -9,8 +9,7 @@ Therefore this readme contains all the documentation for how I configure my mach
 Installing
 ----------
 
-Clone this into your `.config` folder and run the ruby script `setup.rb`.
-If you want to use xmonad, copy `bin/xmonad-autostart` and `bin/xmonad-session` to the right places (listed in the files themselves).
+Clone this into your `.config` folder and run `./setup` to install everything.
 
 Software
 --------
