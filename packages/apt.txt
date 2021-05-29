@@ -41,3 +41,4 @@ waybar
 mpv
 youtube-dl
 fzf
+mpd
