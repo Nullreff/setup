@@ -6,6 +6,7 @@ fd-find
 fish
 gcc
 git
+git-lfs
 grep
 gzip
 hledger-ui
@@ -39,3 +40,4 @@ dmenu
 waybar
 mpv
 youtube-dl
+fzf
