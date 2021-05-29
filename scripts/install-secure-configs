@@ -1,0 +1,17 @@
+#!/bin/bash -e
+
+echo 'Log in to Bitwarden to download secure config files'
+SESSION=`bw login --raw`
+bw sync --session $SESSION
+
+# rclone.conf
+cd ~/.config/
+bw get attachment f6f4j9q3tu5l89ttd98t6zuvaxa0dvwa --itemid 07bffb7c-a565-4f41-93c3-ad2300048459 --session $SESSION
+
+# SSH
+mkdir -p ~/.ssh/
+cd ~/.ssh/
+bw get attachment r345rv2p7tgnj2cq3qn5j7wink2ah51q --itemid 02e7edc4-2be8-4705-b8fa-ad370050d826 --session $SESSION
+bw get attachment 3zzynmbeqcuwn6ydw6zhij10tg8i5g9t --itemid 02e7edc4-2be8-4705-b8fa-ad370050d826 --session $SESSION
+chmod 400 ~/.ssh/id_rsa
+
