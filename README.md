@@ -35,6 +35,7 @@ naps2
 bitwarden
 bitwarden-cli
 vlc
+microsoft-windows-terminal
 ```
 
 In order to run emacs on windows I launch it using X forwarding as described in [hubisan/emacs-wsl](https://github.com/hubisan/emacs-wsl)
