@@ -21,13 +21,13 @@ For my hardware linux installs I try to run [an encrypted BTRFS volume](https://
 currently working on setting it up to work with a Yubikey.
 For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers just use the stock kernel.
 
-#### Windows Chocolaty Packages
+#### Windows
 
+Chocolaty Packages:
 ```
 chromium
 firefox
 curl
-emacs
 git
 nssm
 rclone
@@ -37,6 +37,7 @@ bitwarden-cli
 vlc
 ```
 
+In order to run emacs on windows I launch it using X forwarding as described in [hubisan/emacs-wsl](https://github.com/hubisan/emacs-wsl)
 
 ### Files
 
