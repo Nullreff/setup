@@ -44,3 +44,4 @@ youtube-dl
 fzf
 mpd
 neofetch
+ispell
