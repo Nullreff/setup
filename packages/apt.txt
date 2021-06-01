@@ -43,3 +43,4 @@ mpv
 youtube-dl
 fzf
 mpd
+neofetch
