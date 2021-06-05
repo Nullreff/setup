@@ -1,3 +1,5 @@
 [user]
 	email = git@nullreff.net
 	name = Nullreff
+[init]
+	defaultBranch = main
