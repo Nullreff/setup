@@ -6,10 +6,12 @@ set fish_greeting ""
 setenv EDITOR vim
 
 function update
-    sudo apt-get update
-    sudo apt-get dist-upgrade -y
-    sudo apt-get autoremove -y
-    sudo apt-get clean
+    sudo apt update
+    sudo apt dist-upgrade -y
+    sudo apt autoremove -y
+    sudo apt clean
+    sudo snap refresh
+    ~/.emacs.d/bin/doom install
 end
 
 function format-json
