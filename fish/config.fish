@@ -11,6 +11,7 @@ function update
     sudo apt autoremove -y
     sudo apt clean
     sudo snap refresh
+    vim +BundleInstall +qall
     ~/.emacs.d/bin/doom install
 end
 
