@@ -17,3 +17,4 @@ sudo snap install $(grep -vE "^\s*#" packages/snap.txt  | tr "\n" " ")
 ./scripts/install-ly
 ./scripts/install-firefox-developer-edition
 ./scripts/install-liquorix
+./scripts/install-doom-emacs
