@@ -1,7 +1,6 @@
 atool
 curl
 clang
-emacs
 fd-find
 fish
 gcc
@@ -26,7 +25,6 @@ ruby
 sed
 silversearcher-ag
 tree
-vim
 wget
 firmware-linux
 intel-microcode

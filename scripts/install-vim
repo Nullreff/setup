@@ -1,0 +1,10 @@
+#!/bin/bash -e
+sudo apt install git vim
+
+if [! -d ~/.vim/bundle/vundle ]; then
+    echo 'vim: Installing Vundle'
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+echo 'vim: Installing Plugins'
+vim +PluginInstall +qall

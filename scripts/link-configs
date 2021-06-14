@@ -3,11 +3,12 @@
 require 'fileutils'
 
 CONFIGS = %w(
-  vimrc
+  ackrc
+  gemrc
   gitconfig
   gitignore
-  gemrc
-  ackrc
+  mozilla
+  vimrc
 )
 
 # Link config files
@@ -31,14 +32,3 @@ CONFIGS.each do |config|
     puts "#{config}: Couldn't find file at the path '#{home_file}'"
   end
 end
-
-# Install vim plugins
-unless File.directory? File.expand_path('~/.vim/bundle/vundle')
-  puts 'vim: Installing Vundle'
-  `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
-else
-  puts 'vim: Vundle already installed'
-end
-
-puts 'vim: Installing plugins'
-`vim +BundleInstall +qall`
