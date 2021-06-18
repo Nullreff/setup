@@ -19,3 +19,4 @@ sudo snap install $(grep -vE "^\s*#" packages/snap.txt  | tr "\n" " ")
 ./scripts/install-liquorix
 ./scripts/install-vim
 ./scripts/install-doom-emacs
+./scripts/install-ruby
