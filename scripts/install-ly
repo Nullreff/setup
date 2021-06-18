@@ -1,8 +1,15 @@
 #!/bin/bash -e
 sudo apt-get install -y build-essential libpam0g-dev libxcb-xkb-dev
+sudo apt-get purge -y lightdm
+
 mkdir -p ~/src/
-git clone https://github.com/nullgemm/ly.git ~/src/ly/
+if [! -d ~/src/ly/ ]; then
+    git clone https://github.com/nullgemm/ly.git ~/src/ly/
+fi
+
 cd ~/src/ly/
+git pull
+
 make github
 make
 sudo make install
