@@ -4,7 +4,6 @@ set PATH ~/.cargo/bin $PATH
 set PATH /snap/bin $PATH
 set PATH ~/.emacs.d/bin $PATH
 
-
 set fish_greeting ""
 setenv EDITOR vim
 
