@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-sudo apt install ruby bundler rake
+sudo apt install -y ruby bundler rake
