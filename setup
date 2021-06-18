@@ -20,3 +20,4 @@ sudo snap install $(grep -vE "^\s*#" packages/snap.txt  | tr "\n" " ")
 ./scripts/install-vim
 ./scripts/install-doom-emacs
 ./scripts/install-ruby
+./scripts/install-nodejs
