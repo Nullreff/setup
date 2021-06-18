@@ -1,6 +1,10 @@
 #!/bin/bash -e
-sudo apt-get install -y build-essential libpam0g-dev libxcb-xkb-dev
+
+# Disable lightdm before we install ly
 sudo apt-get purge -y lightdm
+sudo systemctl disable lightdm.service
+
+sudo apt-get install -y build-essential libpam0g-dev libxcb-xkb-dev
 
 mkdir -p ~/src/
 if [! -d ~/src/ly/ ]; then
