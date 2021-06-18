@@ -1,13 +1,15 @@
 #!/bin/bash -e
 
 # Disable lightdm before we install ly
-sudo apt-get purge -y lightdm
-sudo systemctl disable lightdm.service
+if [ $(systemctl list-unit-files "lighdm*" | wc -l) -gt 3 ]; then
+    sudo apt-get purge -y lightdm
+    sudo systemctl disable lightdm.service
+fi
 
 sudo apt-get install -y build-essential libpam0g-dev libxcb-xkb-dev
 
 mkdir -p ~/src/
-if [! -d ~/src/ly/ ]; then
+if [ ! -d ~/src/ly/ ]; then
     git clone https://github.com/nullgemm/ly.git ~/src/ly/
 fi
 
