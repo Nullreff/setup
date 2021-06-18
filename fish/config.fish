@@ -1,4 +1,5 @@
 set PATH ~/bin $PATH
+set PATH ~/.local/bin $PATH
 set PATH ~/.cargo/bin $PATH
 set PATH /snap/bin $PATH
 set PATH ~/.emacs.d/bin $PATH
