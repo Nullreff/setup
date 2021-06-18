@@ -1,0 +1,5 @@
+profile {
+    output DP-3 mode 3840x2160 scale 1 position 0,2160
+    output DP-4 mode 3840x2160 scale 1 position 3840,2160
+    output HDMI-A-2 mode 3840x2160 scale 1 position 1920,0
+}
