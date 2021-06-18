@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+sudo apt install -y amd64-microcode firmware-amd-graphics firmware-intel-sound \
+    firmware-linux firmware-misc-nonfree intel-microcode i965-va-driver-shaders \
+    intel-media-va-driver-non-free mesa-vulkan-drivers mesa-utils-extra
+
+sudo cp ~/.config/files/network-setup-canyon /etc/network/interfaces.d/setup
+sudo systemctl restart networking.service
+
