@@ -1,13 +1,14 @@
-# Adapted from https://aur.archlinux.org/cgit/aur.git/tree/kanshi.service?h=kanshi-git
-Unit]
-Description=Dynamic output configuration for Wayland WMs.
-Documentation=https://github.com/emersion/kanshi
-BindsTo=graphical-session.target
-After=graphical-session.target
+[Unit]
+Description=Dynamic output configuration
+Documentation=man:kanshi(1)
+PartOf=sway-session.target
+Requires=sway-session.target
+After=sway-session.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/kanshi
+Restart=always
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=sway-session.target

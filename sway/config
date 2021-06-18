@@ -195,8 +195,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bar {
-    swaybar_command waybar
-}
-
 include /etc/sway/config.d/*
+
+# Start up all the services via systemd
+exec "systemctl --user import-environment; systemctl --user start sway-session.target"
