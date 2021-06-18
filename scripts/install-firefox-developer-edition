@@ -2,6 +2,7 @@
 # Adapted from https://github.com/tanrax/linux-install-firefox-developer-edition
 
 sudo rm -rf /opt/firefox-developer/ /usr/bin/firefox
+sudo apt purge -y firefox firefox-esr
 
 mkdir -p ~/Downloads/
 cd ~/Downloads/
