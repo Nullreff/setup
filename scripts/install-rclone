@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+sudo apt install -y rclone
+
+mkdir -p ~/remote ~/.cache/rclone/remote/
+
+systemctl --user enable rclone-remote.service
+systemctl --user start rclone-remote.service

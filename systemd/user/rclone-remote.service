@@ -1,0 +1,14 @@
+[Unit]
+Description=Mounting my remote directories
+Documentation=man:rclone(1)
+PartOf=sway-session.target
+Requires=sway-session.target
+After=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount --vfs-cache-mode full --cache-dir /home/nullreff/.cache/rclone/remote/ --volname remote gdrive_encrypted:/ /home/nullreff/remote/
+Restart=always
+
+[Install]
+WantedBy=sway-session.target
