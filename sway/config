@@ -10,12 +10,13 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
+set $menu exec $term --class=launcher -e /home/nullreff/src/sway-launcher-desktop/sway-launcher-desktop.sh
 
 include /etc/sway/config-vars.d/*
 
