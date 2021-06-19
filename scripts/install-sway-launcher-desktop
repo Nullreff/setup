@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+sudo apt-get install -y fzf mawk
+
+mkdir -p ~/src/
+if [ ! -d ~/src/sway-launcher-desktop/ ]; then
+    git clone https://github.com/Biont/sway-launcher-desktop.git ~/src/sway-launcher-desktop/
+fi
+
+cd ~/src/sway-launcher-desktop/
+git pull
+
