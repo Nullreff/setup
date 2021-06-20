@@ -6,7 +6,6 @@ CONFIGS = %w(
   ackrc
   gemrc
   gitconfig
-  gitignore
   mozilla
   vimrc
 )
