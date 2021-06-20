@@ -23,7 +23,11 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/sway/background.png fill
+# Wallpapers are configred in kanshi
+#output * bg ~/.config/sway/background.png fill
+output DP-3 bg ~/.config/files/background-alex.jpg fill
+output DP-4 bg ~/.config/files/background-aberus.png fill
+output HDMI-A-2 bg ~/.config/files/background-trestle.jpg fill
 
 default_border none
 #
@@ -202,3 +206,4 @@ include /etc/sway/config.d/*
 
 # Start up all the services via systemd
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
+exec_always "systemctl --user restart kanshi.service"
