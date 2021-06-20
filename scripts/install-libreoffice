@@ -1,2 +1,2 @@
 #!/bin/bash -e
-sudo apt install -y libreoffice
+sudo apt install -y libreoffice-gtk3
