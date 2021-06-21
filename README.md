@@ -92,15 +92,16 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 
 #### Customizations
 
+* When it opens for the first time, sele
 * Hide the tabs at the top using CSS since I use Tree Tabs [https://superuser.com/a/1268734](https://superuser.com/a/1268734)
 * Install the ivory-dark theme for Tree Tabs, it can be found under `files/ivory-dark.tt_theme` in this repo
-* Disable everything under "Logins and Passwords" and "Forms and Autofill" in firefox settings since Bitwarden handles it for me
-* Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same
+* Under `Privacy & Security`, disable everything under `Logins and Passwords` and `Forms and Autofill` since Bitwarden handles it for me
+* Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same. In Custom New Tab, set `Theme` to `Dark` and check `Force links to open in the top frame (experemental)?`
 * Add the rules from `files/youtube-recommended-block.txt` in this repo to uBlock origin
 * Under `Search`, change default search engine to `DuckDuckGo`
 * Under `Privacy & Security`, select `Enable HTTPS-Only Mode in all windows`
 * In `about:config` change `reader.color_scheme` to `dark`
-* Make sure firefox is set to dark mode
+* Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, `Tree Tabs`
 
 ### Notes
 
