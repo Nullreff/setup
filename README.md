@@ -44,7 +44,7 @@ In the future when [wslg](https://github.com/microsoft/wslg) ships I'll switch t
 ### Files
 
 I use [Rclone](https://rclone.org/) for keeping my files in sync across different devices.
-For mobile I use [RCX](https://github.com/x0b/rcx) for file access.
+For mobile I use [rcx](https://x0b.github.io/) for file access.
 My rclone.conf is encrypted and stored in Bitwarden to sync across multiple machines.
 
 This includes stuff like SSH/FTP access to servers as well as cloud storage.
@@ -65,7 +65,7 @@ If you want to play around with it, launch the GUI with `rclone rcd --rc-web-gui
 
 #### Mobile Setup
 
-1. [Install RCX](https://f-droid.org/en/packages/io.github.x0b.rcx/)
+1. [Install rcx](https://f-droid.org/en/packages/io.github.x0b.rcx/)
 2. Download the Rclone config from Bitwarden and import it to the app
 3. Open the remotes apps will access and serve them as webdav
 
@@ -105,8 +105,8 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 ### Notes
 
 I use [Org Mode](https://orgmode.org/) for writing pretty much everything down.
-This is automatically saved online by using a [Nextcloud WebDav connection](https://docs.nextcloud.com/server/20/user_manual/en/files/access_webdav.html#creating-webdav-mounts-on-the-linux-command-line).
-Since it's online I use [Orgzly](http://www.orgzly.com/) on my phone to also connect with the WebDav server so I can keep everything in sync.
+This is backed up and synced via [Rclone](https://rclone.org/) from all my devices.
+I use [Orgzly](http://www.orgzly.com/) on my phone to connect with WebDav service provided by [rcx](https://x0b.github.io/).
 My next step will probably be setting up [Calender Syncronization](https://orgmode.org/worg/org-tutorials/org-google-sync.html) so I can have one less place to look for stuff.
 
 ### Editors
