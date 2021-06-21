@@ -83,10 +83,8 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 * [Fraidycat](https://addons.mozilla.org/en-US/firefox/addon/fraidycat/)
 * [Greasemonky](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-* [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/)
 * [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
 * [Privacy.com](https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/)
-* [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
 * [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/)
 * [Tree Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-tabs/)
 * [TTV ad-block](https://addons.mozilla.org/en-US/firefox/addon/ttv-adblock/)
@@ -99,8 +97,10 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * Disable everything under "Logins and Passwords" and "Forms and Autofill" in firefox settings since Bitwarden handles it for me
 * Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same
 * Add the rules from `files/youtube-recommended-block.txt` in this repo to uBlock origin
-* Change default search engine to DuckDuckGo
+* Under `Search`, change default search engine to `DuckDuckGo`
+* Under `Privacy & Security`, select `Enable HTTPS-Only Mode in all windows`
 * In `about:config` change `reader.color_scheme` to `dark`
+* Make sure firefox is set to dark mode
 
 ### Notes
 
