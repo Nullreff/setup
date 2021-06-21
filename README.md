@@ -92,7 +92,7 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 
 #### Customizations
 
-* When it opens for the first time, sele
+* When it opens for the first time, select dark mode
 * Hide the tabs at the top using CSS since I use Tree Tabs [https://superuser.com/a/1268734](https://superuser.com/a/1268734)
 * Install the ivory-dark theme for Tree Tabs, it can be found under `files/ivory-dark.tt_theme` in this repo
 * Under `Privacy & Security`, disable everything under `Logins and Passwords` and `Forms and Autofill` since Bitwarden handles it for me
