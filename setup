@@ -25,3 +25,4 @@ sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 ./scripts/install-nodejs
 ./scripts/install-bitwarden
 ./scripts/install-libreoffice
+./scripts/install-cups-printing
