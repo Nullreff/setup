@@ -42,3 +42,4 @@ fzf
 mpd
 neofetch
 ispell
+whois
