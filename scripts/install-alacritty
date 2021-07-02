@@ -1,6 +1,6 @@
 #!/bin/bash -e
 sudo apt install wget
-mkdir -p ~/Downloads/
-cd ~/Downloads
+mkdir -p ~/downloads/
+cd ~/downloads
 wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
 sudo dpkg -i Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
