@@ -1,0 +1,14 @@
+[Unit]
+Description=Webdav service for remote directories
+Documentation=man:rclone(1)
+PartOf=sway-session.target
+Requires=sway-session.target
+After=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone serve webdav --etag-hash Whirlpool --addr 127.0.0.1:53073 gdrive_encrypted:/
+Restart=always
+
+[Install]
+WantedBy=sway-session.target

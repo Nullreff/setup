@@ -6,3 +6,8 @@ mkdir -p ~/remote ~/.cache/rclone/remote/
 
 systemctl --user enable rclone-remote.service
 systemctl --user start rclone-remote.service
+
+mkdir -p ~/.cache/rclone/webdav/
+
+systemctl --user enable rclone-webdav.service
+systemctl --user start rclone-webdav.service
