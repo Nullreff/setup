@@ -1,5 +1,9 @@
 #!/bin/bash -e
 sudo apt-get install emacs git ripgrep findutils fd-find
+if [ -d ~/.emacs.d ]; then
+    exit
+fi
+
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 
 # Prevent installer from asking us if we want an envvar file
