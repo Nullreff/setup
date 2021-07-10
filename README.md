@@ -103,6 +103,8 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * In `about:config` change `reader.color_scheme` to `dark`
 * Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, `Tree Tabs`
 
+If Fraidycat isn't updating, try [restarting the browser completely](https://github.com/kickscondor/fraidycat/issues/92).
+
 ### Notes
 
 I use [Org Mode](https://orgmode.org/) for writing pretty much everything down.
