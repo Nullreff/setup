@@ -5,7 +5,7 @@
 BITWARDEN_ITEM_ID=b4b8d2e9-3b46-4da9-8fc4-ad62005bb778
 FILENAME=wifi_login.png
 
-sudo apt install qrencode
+sudo apt install qrencode imagemagick
 sudo snap install bw
 
 echo 'Log in to Bitwarden to generate wifi qrcode'
