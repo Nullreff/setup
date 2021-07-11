@@ -1,0 +1,3 @@
+#!/bin/bash -e
+sudo apt install cups
+echo -e "\nCups has been set up, if you don't see your printer then run:\nsudo system-config-printer"
