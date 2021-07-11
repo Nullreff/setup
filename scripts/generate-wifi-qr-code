@@ -1,18 +1,23 @@
 #!/bin/bash -e
+# Generates a QR code image along with the username and password
+# for wifi network credentails stored in bitwarden
+
+BITWARDEN_ITEM_ID=b4b8d2e9-3b46-4da9-8fc4-ad62005bb778
+FILENAME=wifi_login.png
+
 sudo apt install qrencode
 sudo snap install bw
 
-echo 'Log in to Bitwarden to generate hotspot qrcode'
+echo 'Log in to Bitwarden to generate wifi qrcode'
 SESSION=`bw login --raw`
 bw sync --session $SESSION
 
 mkdir -p ~/downloads/
 cd ~/downloads/
 
-USERNAME=`bw get username b4b8d2e9-3b46-4da9-8fc4-ad62005bb778 --session $SESSION`
-PASSWORD=`bw get password b4b8d2e9-3b46-4da9-8fc4-ad62005bb778 --session $SESSION`
+USERNAME=`bw get username $BITWARDEN_ITEM_ID --session $SESSION`
+PASSWORD=`bw get password $BITWARDEN_ITEM_ID --session $SESSION`
 
-FILENAME=wifi_login.png
 TEMPNAME=raw_qr_code.png
 qrencode "WIFI:T:WPA;S:$USERNAME;P:$PASSWORD;;" -o $TEMPNAME
 convert $TEMPNAME -scale 200% -bordercolor white -border '0x30' -draw "text 24,20 $USERNAME" -draw "text 24,40 $PASSWORD" $FILENAME
