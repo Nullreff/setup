@@ -121,6 +121,10 @@ I run a mostly stock configuration of [Doom Emacs](https://github.com/hlissner/d
 
 Any configuration files for them should be in this repo somewhere.
 
+### Networking
+
+I use `nmtui` to configure networks and `protonvpn` as a VPN service.
+
 ### TODO
 
 This is kind of out of date, want to update to something more like https://github.com/Axarva/dotfiles-2.0
