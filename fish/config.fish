@@ -14,7 +14,7 @@ function update
     sudo apt clean
     sudo snap refresh
     vim +BundleInstall +qall
-    ~/.emacs.d/bin/doom install
+    doom upgrade
 end
 
 function format-json

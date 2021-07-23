@@ -10,5 +10,9 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 mkdir -p ~/.emacs.d/.local/
 touch ~/.emacs.d/.local/env
 
-~/.emacs.d/bin/doom install
-~/.emacs.d/bin/doom upgrade
+expect <<EOF
+spawn ~/.emacs.d/bin/doom install
+expect "Download and install all-the-icon's fonts?"
+send "y\n"
+expect eof
+EOF
