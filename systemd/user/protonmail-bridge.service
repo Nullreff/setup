@@ -1,0 +1,14 @@
+[Unit]
+Description=Protonmail client bridge service
+PartOf=sway-session.target
+Requires=sway-session.target
+After=sway-session.target
+
+[Service]
+Type=simple
+StandardOutput=journal
+ExecStart=/usr/bin/protonmail-bridge --noninteractive
+Restart=always
+
+[Install]
+WantedBy=sway-session.target

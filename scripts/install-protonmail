@@ -1,0 +1,49 @@
+#!/bin/bash -e
+
+sudo apt install wget expect
+sudo snap install bw
+
+if ! type "protonmail-bridge" > /dev/null; then
+    mkdir -p ~/downloads/
+    cd ~/downloads/
+
+    rm -f protonmail-bridge*.deb
+
+    wget https://protonmail.com/download/bridge/protonmail-bridge_1.8.7-1_amd64.deb
+    sudo dpkg -i protonmail-bridge*.deb
+fi
+
+
+expect <<EOF
+spawn protonmail-bridge --cli
+expect ">>> "
+send "clear accounts\n"
+expect "Do you really"
+send "yes\n"
+expect eof
+EOF
+
+echo 'Log in to Bitwarden to log into Protonmail'
+SESSION=`bw unlock --raw`
+bw sync --session $SESSION
+
+ACCOUNT_IDS=`bw list items --search mail.protonmail.com --session $SESSION | jq -r '.[].id'`
+
+for ACCOUNT_ID in $ACCOUNT_IDS; do
+    USERNAME=`bw get username $ACCOUNT_ID --session $SESSION`
+    PASSWORD=`bw get PASSWORD $ACCOUNT_ID --session $SESSION`
+    TOTP=`bw get totp $ACCOUNT_ID --session $SESSION`
+
+    expect <<EOF
+spawn protonmail-bridge --cli
+expect ">>> "
+send "login\n"
+expect "Username:"
+send "$USERNAME\n"
+expect "Password:"
+send "$PASSWORD\n"
+expect "Two factor code:"
+send "$TOTP\n"
+expect eof
+EOF
+done
