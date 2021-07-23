@@ -1,4 +1,6 @@
 #!/bin/bash -e
+# Installs the protonmail bridge and adds accounts from bitwarden
+# Make sure the accounts reference mail.protonmail.com to be included
 
 sudo apt install wget expect
 sudo snap install bw
