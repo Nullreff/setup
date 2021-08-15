@@ -1,2 +1,7 @@
 #!/bin/bash -e
-sudo apt install -y gnuradio gqrx-sdr
+sudo apt install -y gnuradio gqrx-sdr wget
+mkdir -p ~/downloads/
+cd ~/downloads/
+wget https://github.com/AlexandreRouma/SDRPlusPlus/releases/download/1.0.3/sdrpp_debian_bullseye_amd64.deb
+sudo dpkg -i sdrpp_debian_bullseye_amd64.deb
+
