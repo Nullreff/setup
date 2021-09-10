@@ -1,2 +1,2 @@
-deb http://deb.debian.org/debian/ testing main contrib non-free
-deb-src http://deb.debian.org/debian/ testing main 
+deb http://deb.debian.org/debian/ unstable main contrib non-free
+deb-src http://deb.debian.org/debian/ unstable main 
