@@ -1,5 +1,5 @@
 #!/bin/bash -e
-sudo apt-get install emacs git ripgrep findutils fd-find cmake libtool-bin
+sudo apt-get install -y emacs git ripgrep findutils fd-find cmake libtool-bin expect
 if [ -d ~/.emacs.d ]; then
     exit
 fi
