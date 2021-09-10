@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+sudo apt install -y firmware-linux firmware-misc-nonfree intel-microcode firmware-iwlwifi \
+    intel-media-va-driver-non-free mesa-vulkan-drivers mesa-utils-extra
+
+
