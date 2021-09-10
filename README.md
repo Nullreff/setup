@@ -9,7 +9,21 @@ Therefore this readme contains all the documentation for how I configure my mach
 Installing
 ----------
 
+**Basic:**
+
 Clone this into your `.config` folder and run `./setup` to install everything.
+
+**Advanced:**
+
+Install Debian from a usb stick with full disk encryption and no gui.
+
+```
+su -l
+apt install sudo curl
+usermod nullreff -aG sudo
+su nullreff
+curl https://nullreff.net/install | bash
+```
 
 Software
 --------
