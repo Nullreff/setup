@@ -7,7 +7,7 @@ bw sync --session $SESSION
 # rclone.conf
 mkdir -p ~/.config/rclone/
 cd ~/.config/rclone
-bw get attachment f6f4j9q3tu5l89ttd98t6zuvaxa0dvwa --itemid 07bffb7c-a565-4f41-93c3-ad2300048459 --session $SESSION
+bw get attachment 0su49jtkqzy0gs5lzxq0gmezh4lpb0fw --itemid 07bffb7c-a565-4f41-93c3-ad2300048459 --session $SESSION
 
 # SSH
 mkdir -p ~/.ssh/

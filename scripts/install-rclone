@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-sudo apt install -y rclone
+sudo apt install -y rclone fuse
 
 mkdir -p ~/remote ~/.cache/rclone/remote/
 
