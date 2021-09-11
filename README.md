@@ -141,31 +141,6 @@ Any configuration files for them should be in this repo somewhere.
 
 ### Networking
 
-I use `nmtui` to configure networks and `protonvpn` as a VPN service.
+If the network isn't working, run `ip link` to see what interfaces are available then run `ip link set <name> up` to enable it.
+Once links are up, I use `nmtui` to configure networks and `protonvpn` as a VPN service.
 
-### TODO
-
-This is kind of out of date, want to update to something more like https://github.com/Axarva/dotfiles-2.0
-In addition to what comes with Debian, I use the following programs:
-
-* [htop](https://htop.dev/)
-* [xmonad](http://xmonad.org/)
-* [xmobar](http://projects.haskell.org/xmobar/)
-* [trayer](http://www.ohloh.net/p/trayer)
-* [fish](http://fishshell.com/)
-* [vim](http://www.vim.org/)
-* [ls++](https://github.com/trapd00r/ls--)
-* [smxi](https://smxi.org/)
-
-Notes
------
-
-Stuff I've found over the years that may or may not be relevant
-
-### DisplayLink
-
-~~~bash
-echo "blacklist udlfb" | sudo tee /etc/modprobe.d/blacklist-framebuffer.conf
-~~~
-
-http://displaylink.org/forum/showthread.php?t=64043
