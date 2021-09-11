@@ -4,6 +4,9 @@
 sudo rm -rf /opt/firefox-developer/ /usr/bin/firefox
 sudo apt purge -y firefox firefox-esr
 
+# Needed to work on debian unstable
+sudo apt install libdbus-glib-1-2
+
 mkdir -p ~/downloads/
 cd ~/downloads/
 curl -L -o firefox-developer.tar.bz2 https://download.mozilla.org/\?product\=firefox-devedition-latest-ssl\&os\=linux64\&lang\=en-US
