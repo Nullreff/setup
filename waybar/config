@@ -48,9 +48,9 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%Y-%m-%d %H:%M}",
+        //"tooltip-format": "{calendar}",
+        "format-alt": "{:%Y-%m-%d %I:%M %p}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -74,7 +74,8 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "full": 100,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -82,8 +83,8 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-good": "{capacity}% ",
+        "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
