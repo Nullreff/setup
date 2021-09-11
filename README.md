@@ -30,9 +30,16 @@ Software
 
 ### Operating System
 
-I currently use Debian Testing for my desktop, Android for my phone and Debian Stable for my servers.
-For my hardware linux installs I try to run [an encrypted BTRFS volume](https://www.paritybit.ca/blog/debian-with-btrfs)
-currently working on setting it up to work with a Yubikey.
+Pretty much everything in this repo is built on top of Debian.
+This is for a few key reasons:
+
+1. Debian is ubiquitous across pretty much everything. I have yet to run into software, services or anything else that did not support Debian (or by extension Ubuntu). Having a configuration that can move from install to install and expect to work well for just about everything I do is important to me. There are plenty of other cool operating systems that I love for their philosophy and tech but none are as universally supported as Debian. If that changes and another distro gains more universal acceptance, I may be more inclined to swap.
+2. Debian is flexible in that it offers a rock solid platform that doesn't break (stable) to a more up to date environment (testing) to a rolling release with the latest stuff (unstable). I can choose based on what my requirements are for stability and up to date software.
+3. Debian has plenty of information available online. If something breaks you can bet that someone else has also had it break and probably already found a solution. This saves me time over being the first/only person to troubleshoot an issue on a newer or more obscure distro.
+4. Debian is simple to understand and my setup on it is simple to understand. Rather than trying to adapt my setup to a complex package manager or making it super configurable I keep it one step above setting up the system manually. I have a set of shell scripts that repeat the steps I would take to manually configure the software and nothing more. If I need to configure the installation I change the shell script. If the script fails to run I have an exact set of steps that it ran and can quickly troubleshoot.
+
+I currently use Debian Unstable for my personal computers, Debian Stable for my servers and Android for my phone (but am looking to change).
+For my personal linux installs I run an encrypted drive with a single partition because I like to compute dangerously.
 For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers just use the stock kernel.
 
 #### Windows

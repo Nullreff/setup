@@ -35,6 +35,7 @@ swaybg
 swayidle
 swaylock
 wev
+ddcutil
 dmenu
 waybar
 mpv
