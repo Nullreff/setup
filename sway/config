@@ -28,6 +28,7 @@ include /etc/sway/config-vars.d/*
 output DP-3 bg ~/.config/files/background-aberus.png fill
 output DP-4 bg ~/.config/files/background-alex.jpg fill
 output HDMI-A-2 bg ~/.config/files/background-trestle.jpg fill
+output eDP-1 bg ~/.config/files/background-aberus.png fill
 
 default_border none
 #
@@ -172,6 +173,7 @@ default_border none
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
+    # Toggling it's floading will bring it back to the current workspace
     bindsym $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
