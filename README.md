@@ -117,6 +117,9 @@ I use [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/develope
 * In `about:config` change `reader.color_scheme` to `dark`
 * Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, `Tree Tabs`
 
+If menus and drop downs aren't opening try [enabling and disabling the main display](https://bugzilla.mozilla.org/show_bug.cgi?id=1600584)
+`$ swaymsg output eDP-1 disable; swaymsg output eDP-1 enable`
+
 If Fraidycat isn't updating, try [restarting the browser completely](https://github.com/kickscondor/fraidycat/issues/92).
 
 ### Notes
