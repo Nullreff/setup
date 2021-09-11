@@ -1,0 +1,12 @@
+[Unit]
+Description=Pulseaudio Sound Service
+Requires=pulseaudio.socket
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/pulseaudio --verbose --daemonize=no
+Restart=on-failure
+
+[Install]
+Also=pulseaudio.socket
+WantedBy=default.target

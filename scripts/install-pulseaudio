@@ -1,0 +1,10 @@
+#!/bin/bash -e
+# Adapted from https://gist.github.com/kafene/32a07cac0373409e31f5bfe981eefb19
+# with module-alsa-sink removed because it causes an error
+
+sudo apt install -y pulseaudio pavucontrol
+
+systemctl --user daemon-reload
+systemctl --user enable pulseaudio.service
+systemctl --user enable pulseaudio.socket
+systemctl --user start pulseaudio.service
