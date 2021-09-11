@@ -1,0 +1,26 @@
+#!/bin/bash -e
+
+[[ $(type -P "cargo") ]] || { echo "Please install rust first .config/scripts/install-rust" 1>&2; exit 1; }
+sudo apt install -y wget
+
+mkdir -p ~/src/
+cd ~/src/
+
+if [ ! -d ~/src/wluma ]; then
+    git clone https://github.com/maximbaz/wluma.git
+fi
+
+cd ~/src/wluma/
+git pull
+
+make build
+sudo make install
+mkdir -p ~/.local/share/wluma/
+
+ln -s ~/src/wluma/wluma.service ~/.config/systemd/user/wluma.service
+systemctl --user daemon-reload
+systemctl --user enable wluma.service
+systemctl --user start wluma.service
+
+sudo usermod $(whoami) -aG video
+
