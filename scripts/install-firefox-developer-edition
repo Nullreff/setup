@@ -9,6 +9,9 @@ sudo apt install libdbus-glib-1-2
 
 mkdir -p ~/downloads/
 cd ~/downloads/
+
+# Latest version currently has an issue 
+# https://bbs.archlinux.org/viewtopic.php?id=269505
 curl -L -o firefox-developer.tar.bz2 https://download.mozilla.org/\?product\=firefox-devedition-latest-ssl\&os\=linux64\&lang\=en-US
 
 # EXTRACT
