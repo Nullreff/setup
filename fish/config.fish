@@ -3,6 +3,7 @@ set PATH ~/.local/bin $PATH
 set PATH ~/.cargo/bin $PATH
 set PATH /snap/bin $PATH
 set PATH ~/.emacs.d/bin $PATH
+set PATH ~/.local/share/miniconda3/bin $PATH
 
 # Wayland fixes, disable if you're not using it
 set GDK_BACKEND wayland
