@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+sudo apt install -y wget
+
+if [ ! -f ~/downloads/steam.deb ]; then
+    mkdir -p ~/downloads/
+    cd ~/downloads/
+    wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+fi
+
+sudo dpkg -i ~/downloads/steam.deb
+
