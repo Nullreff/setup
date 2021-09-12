@@ -37,3 +37,5 @@ mpd
 neofetch
 ispell
 whois
+fonts-noto
+fonts-noto-extra
