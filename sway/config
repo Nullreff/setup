@@ -28,7 +28,7 @@ include /etc/sway/config-vars.d/*
 output DP-3 bg ~/.config/files/background-aberus.png fill
 output DP-4 bg ~/.config/files/background-alex.jpg fill
 output HDMI-A-2 bg ~/.config/files/background-trestle.jpg fill
-output eDP-1 bg ~/.config/files/background-aberus.png fill
+output eDP-1 bg ~/.config/files/background-god-skipping-stones-hynik.jpg fill
 
 default_border none
 #
