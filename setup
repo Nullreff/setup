@@ -28,3 +28,6 @@ sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 ./scripts/install-bitwarden
 ./scripts/install-libreoffice
 ./scripts/install-printing
+./scripts/install-rust
+./scripts/install-wluma
+./scripts/install-thunar
