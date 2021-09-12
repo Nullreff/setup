@@ -48,9 +48,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M}",
-        //"tooltip-format": "{calendar}",
-        "format-alt": "{:%Y-%m-%d %I:%M %p}"
+        "format": "{:%a %b %d %H:%M}",
     },
     "cpu": {
         "format": "{usage}% ",
@@ -96,7 +94,7 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click": "alacritty -e nmtui",
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
