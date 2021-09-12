@@ -30,14 +30,6 @@ firmware-linux
 intel-microcode
 firmware-iwlwifi
 snapd
-sway
-swaybg
-swayidle
-swaylock
-wev
-ddcutil
-dmenu
-waybar
 mpv
 youtube-dl
 fzf

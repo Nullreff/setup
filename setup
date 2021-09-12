@@ -15,6 +15,7 @@ sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 
 # Some software we have to build or install using a script
 ./scripts/install-networking
+./scripts/install-sway
 ./scripts/install-ly
 ./scripts/install-kanshi
 ./scripts/install-alacritty
