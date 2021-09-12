@@ -1,0 +1,13 @@
+diff --git a/sway-launcher-desktop.sh b/sway-launcher-desktop.sh
+index 555edba..905a193 100755
+--- a/sway-launcher-desktop.sh
++++ b/sway-launcher-desktop.sh
+@@ -46,7 +46,7 @@ if [ -f "${PROVIDERS_FILE}" ]; then
+   fi
+ else
+   PROVIDERS['desktop']="${0} list-entries${DEL}${0} describe-desktop \"{1}\"${DEL}${0} run-desktop '{1}' {2}"
+-  PROVIDERS['command']="${0} list-commands${DEL}${0} describe-command \"{1}\"${DEL}${TERMINAL_COMMAND} {1}"
++  PROVIDERS['command']="${0} list-commands${DEL}${0} describe-command \"{1}\"${DEL} {1}"
+   if [[ ! -v HIST_FILE ]]; then
+     HIST_FILE="${XDG_CACHE_HOME:-$HOME/.cache}/${0##*/}-history.txt"
+   fi

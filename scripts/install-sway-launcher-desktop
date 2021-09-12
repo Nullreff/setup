@@ -8,5 +8,7 @@ if [ ! -d ~/src/sway-launcher-desktop/ ]; then
 fi
 
 cd ~/src/sway-launcher-desktop/
+git reset HEAD --hard
 git pull
 
+git apply ~/.config/files/sway-launcher-desktop-no-terminal.patch
