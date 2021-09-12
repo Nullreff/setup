@@ -5,7 +5,11 @@ profile {
 }
 
 profile {
-    output HDMI-A-2 mode 3840x2160 scale 2 position 0,0
+    output HDMI-A-1 mode 3840x2160@59.939999 scale 1 position 0,0
+}
+
+profile {
+    output HDMI-A-2 mode 3840x2160@59.939999 scale 1 position 0,0
 }
 
 profile {
