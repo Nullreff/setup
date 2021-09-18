@@ -14,6 +14,7 @@ sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 ./scripts/link-configs
 
 # Some software we have to build or install using a script
+./scripts/install-fish
 ./scripts/install-networking
 ./scripts/install-sway
 ./scripts/install-ly
