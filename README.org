@@ -1,32 +1,29 @@
-Nullreff's .config files
-========================
+* Nullreff's config files
 
 These are the custom configuration files used to run my computer.
 They're very specific to my own setup but feel free to draw inspiration or copy them to your own setup.
 As much as I try to automate, not everything can be automatically setup across multiple operating systems and machines.
 Therefore this readme contains all the documentation for how I configure my machines.
 
-Installing
-----------
+** Installing
 
 For a simple setup, clone this into your `.config` folder and run `./setup` to install everything.
 For a more advanced explanation read on...
 
 For a more advanced install Debian from a usb stick with full disk encryption and no gui.
 
-```
+#+SRC_BEGIN
 su -l
 apt install sudo curl
 usermod nullreff -aG sudo
 su nullreff
 curl https://nullreff.net/install | bash
-```
+#+SRC_END
 
 Rather than running the full =./setup= script you run individual scripts from the [[/scripts/]] folder.
 For more details on how to setup various things, check out [[/docs/]] folder and read the comments I have in the install scritps and config files.
 
-Design
-----------
+** Design
 
 Pretty much everything in this repo is built to run on top of Debian or Android
 This is for a few key reasons:
@@ -36,6 +33,7 @@ This is for a few key reasons:
 3. They have plenty of information available online. If something breaks you can bet that someone else has also had it break and probably already found a solution. This saves me time over being the first/only person to troubleshoot an issue on a newer or more obscure distro.
 
 For my core devices, I currently use:
+
 - Debian Unstable for my personal computers
 - Debian Stable for my servers
 - Calyx OS for my phones
