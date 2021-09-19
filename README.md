@@ -30,7 +30,7 @@ For my core devices, I currently use:
 - Calyx OS for my phones
 
 
-### Debian
+### Personal Computers
 
 Install Debian from a usb stick with full disk encryption and no gui.
 
@@ -45,142 +45,9 @@ curl https://nullreff.net/install | bash
 For my personal linux installs I run an encrypted drive with a single partition because I like to compute dangerously.
 For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers just use the stock kernel.
 
-### Calyx OS
+### Phone
 
-Install with microG enabled since I still make use of some google services.
-Trying to move everything over to fdroid but there's still some stuff from Aurora I use.
-
-#### Apps
-
-In Fdroid, opne 'Updates' and drag down to update repositories
-
-Fdroid:
-- Aurora Store
-- LocationPrivacy
-- MuPDF viewer
-- OONI Probe
-- Orbot
-- Orgzly
-- Scrambled Exif
-- Tor Browser
-- Weather
-- Yubico Authenticator
-- Telegram FOSS
-- Signal
-- Feeder
-- RedReader
-- NewPipe
-- Fritter
-- VLC
-- Cone
-- Calculator
-- Organic Maps
-- RCX
-- Termux
-- ProtonVPN
-- Calyx VPN
-- Riseup VPN
-- Barcode Scanner
-- Spotiflyer
-
-Auraura Store:
-- Discord (Aurara)
-- ProtonMail (Aurara)
-- Slack (Aurara)
-- Economist (Aurara)
-- OptionStrat (Aurara)
-- TradingView (Aurara)
-- IBKR (Aurara)
-- Bitwarden (Aurara)
-
-### Setup
-
-#### Settings
-
-- Apps & Notifications
-    - Default apps
-        - Change the default SMS app to 'Signal'
-- Battery
-    - Enable 'Battery percentage'
-- Display
-    - Enable 'Dark theme'
-    - Enable 'Night Light' and set it to 'sunrise to sunset'
-    - Enable 'Adaptive Brightness'
-    - Configure wallpaper and lock screen images
-- Sound
-    - Enable 'Do Not Disturb'
-    - Disable all under 'Other Sounds and Vibrations' except for 'Touch vibration'
-- Location
-    - Disable 'Use location'
-    - Disable 'Wi-Fi and Bluetooth scanning'
-    - Check and make sure only apps that should access location can
-- Security
-    - Change 'Screen lock' to password
-    - Set up 'Fingerprint'
-
-#### Screen
-
-- Tiles
-    - Wi-Fi
-    - Mobile data
-    - Bluetooth
-    - VPN
-    - Airplane mode
-    - Flashlight
-    - Location
-    - Battery Saver
-    - Hotspot
-    - Do Not Disturb
-    - Auto Rotate
-    - Screen Record
-    - Screen Cast
-    - Night Light
-- Home Screen
-    - Weather widget (Single day)
-    - Digital clock widget
-    - Orgzly widget (Saved Search)
-- App Groups
-    - Messages
-        - Dialer
-        - Discord
-        - ProtonMail
-        - Signal
-        - Slack
-        - Telegram
-
-    - Media
-        - Economist
-        - Feeder
-        - Fritter
-        - NewPipe
-        - RedReader
-        - Spotify
-        - VLC
-
-    - Assets
-        - Calculator
-        - Cone
-        - IBKR (Aurara)
-        - OptionStrat
-        - TradingView
-
-    - Tools
-        - Bitwarden
-        - Organic Maps
-        - RCX
-        - Termux
-        - ProtonVPN
-        - Calyx VPN
-        - Riseup VPN
-        - Tor Browser
-    - DuckDuckGo Privacy Browser
-
-### App Configuratio
-
--Weather
-    - Set temperature to C
-
-
+See the instructions in [[docs/phone.org]]
 
 #### Windows
 
