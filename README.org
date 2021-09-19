@@ -9,7 +9,7 @@ Therefore this readme contains all the documentation for how I configure my mach
 
 For a simple setup, clone this into your =.config= folder and run =./setup= to install everything.
 
-For a more advanced install Debian from a usb stick with full disk encryption and no gui.
+For a more advanced setup, install Debian from a usb stick with full disk encryption and no gui.
 
 #+BEGIN_SRC
 su -l
