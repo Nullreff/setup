@@ -9,11 +9,28 @@ Therefore this readme contains all the documentation for how I configure my mach
 Installing
 ----------
 
-**Basic:**
-
 Clone this into your `.config` folder and run `./setup` to install everything.
+For a more advanced explanation read on...
 
-**Advanced:**
+
+Operating Systems
+-----------------
+
+Pretty much everything in this repo is built on top of Debian.
+This is for a few key reasons:
+
+1. Debian is ubiquitous across pretty much everything. I have yet to run into software, services or anything else that did not support Debian (or by extension Ubuntu). Having a configuration that can move from install to install and expect to work well for just about everything I do is important to me. There are plenty of other cool operating systems that I love for their philosophy and tech but none are as universally supported as Debian. If that changes and another distro gains more universal acceptance, I may be more inclined to swap.
+2. Debian is flexible in that it offers a rock solid platform that doesn't break (stable) to a more up to date environment (testing) to a rolling release with the latest stuff (unstable). I can choose based on what my requirements are for stability and up to date software.
+3. Debian has plenty of information available online. If something breaks you can bet that someone else has also had it break and probably already found a solution. This saves me time over being the first/only person to troubleshoot an issue on a newer or more obscure distro.
+4. Debian is simple to understand and my setup on it is simple to understand. Rather than trying to adapt my setup to a complex package manager or making it super configurable I keep it one step above setting up the system manually. I have a set of shell scripts that repeat the steps I would take to manually configure the software and nothing more. If I need to configure the installation I change the shell script. If the script fails to run I have an exact set of steps that it ran and can quickly troubleshoot.
+
+For my core devices, I currently use:
+- Debian Unstable for my personal computers
+- Debian Stable for my servers
+- Calyx OS for my phones
+
+
+### Debian
 
 Install Debian from a usb stick with full disk encryption and no gui.
 
@@ -25,24 +42,149 @@ su nullreff
 curl https://nullreff.net/install | bash
 ```
 
-Software
---------
-
-### Operating System
-
-Pretty much everything in this repo is built on top of Debian.
-This is for a few key reasons:
-
-1. Debian is ubiquitous across pretty much everything. I have yet to run into software, services or anything else that did not support Debian (or by extension Ubuntu). Having a configuration that can move from install to install and expect to work well for just about everything I do is important to me. There are plenty of other cool operating systems that I love for their philosophy and tech but none are as universally supported as Debian. If that changes and another distro gains more universal acceptance, I may be more inclined to swap.
-2. Debian is flexible in that it offers a rock solid platform that doesn't break (stable) to a more up to date environment (testing) to a rolling release with the latest stuff (unstable). I can choose based on what my requirements are for stability and up to date software.
-3. Debian has plenty of information available online. If something breaks you can bet that someone else has also had it break and probably already found a solution. This saves me time over being the first/only person to troubleshoot an issue on a newer or more obscure distro.
-4. Debian is simple to understand and my setup on it is simple to understand. Rather than trying to adapt my setup to a complex package manager or making it super configurable I keep it one step above setting up the system manually. I have a set of shell scripts that repeat the steps I would take to manually configure the software and nothing more. If I need to configure the installation I change the shell script. If the script fails to run I have an exact set of steps that it ran and can quickly troubleshoot.
-
-I currently use Debian Unstable for my personal computers, Debian Stable for my servers and Android for my phone (but am looking to change).
 For my personal linux installs I run an encrypted drive with a single partition because I like to compute dangerously.
 For my desktop kernel I run [liquorix](http://liquorix.net/) and for servers just use the stock kernel.
 
+### Calyx OS
+
+Install with microG enabled since I still make use of some google services.
+Trying to move everything over to fdroid but there's still some stuff from Aurora I use.
+
+#### Apps
+
+In Fdroid, opne 'Updates' and drag down to update repositories
+
+Fdroid:
+- Aurora Store
+- LocationPrivacy
+- MuPDF viewer
+- OONI Probe
+- Orbot
+- Orgzly
+- Scrambled Exif
+- Tor Browser
+- Weather
+- Yubico Authenticator
+- Telegram FOSS
+- Signal
+- Feeder
+- RedReader
+- NewPipe
+- Fritter
+- VLC
+- Cone
+- Calculator
+- Organic Maps
+- RCX
+- Termux
+- ProtonVPN
+- Calyx VPN
+- Riseup VPN
+- Barcode Scanner
+- Spotiflyer
+
+Auraura Store:
+- Discord (Aurara)
+- ProtonMail (Aurara)
+- Slack (Aurara)
+- Economist (Aurara)
+- OptionStrat (Aurara)
+- TradingView (Aurara)
+- IBKR (Aurara)
+- Bitwarden (Aurara)
+
+### Setup
+
+#### Settings
+
+- Apps & Notifications
+    - Default apps
+        - Change the default SMS app to 'Signal'
+- Battery
+    - Enable 'Battery percentage'
+- Display
+    - Enable 'Dark theme'
+    - Enable 'Night Light' and set it to 'sunrise to sunset'
+    - Enable 'Adaptive Brightness'
+    - Configure wallpaper and lock screen images
+- Sound
+    - Enable 'Do Not Disturb'
+    - Disable all under 'Other Sounds and Vibrations' except for 'Touch vibration'
+- Location
+    - Disable 'Use location'
+    - Disable 'Wi-Fi and Bluetooth scanning'
+    - Check and make sure only apps that should access location can
+- Security
+    - Change 'Screen lock' to password
+    - Set up 'Fingerprint'
+
+#### Screen
+
+- Tiles
+    - Wi-Fi
+    - Mobile data
+    - Bluetooth
+    - VPN
+    - Airplane mode
+    - Flashlight
+    - Location
+    - Battery Saver
+    - Hotspot
+    - Do Not Disturb
+    - Auto Rotate
+    - Screen Record
+    - Screen Cast
+    - Night Light
+- Home Screen
+    - Weather widget (Single day)
+    - Digital clock widget
+    - Orgzly widget (Saved Search)
+- App Groups
+    - Messages
+        - Dialer
+        - Discord
+        - ProtonMail
+        - Signal
+        - Slack
+        - Telegram
+
+    - Media
+        - Economist
+        - Feeder
+        - Fritter
+        - NewPipe
+        - RedReader
+        - Spotify
+        - VLC
+
+    - Assets
+        - Calculator
+        - Cone
+        - IBKR (Aurara)
+        - OptionStrat
+        - TradingView
+
+    - Tools
+        - Bitwarden
+        - Organic Maps
+        - RCX
+        - Termux
+        - ProtonVPN
+        - Calyx VPN
+        - Riseup VPN
+        - Tor Browser
+    - DuckDuckGo Privacy Browser
+
+### App Configuratio
+
+-Weather
+    - Set temperature to C
+
+
+
 #### Windows
+
+If I'm ever forced onto windows
 
 Chocolaty Packages:
 ```
