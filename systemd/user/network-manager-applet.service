@@ -1,0 +1,13 @@
+[Unit]
+Description=nm-applet
+PartOf=sway-session.target
+Requires=sway-session.target
+After=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nm-applet
+Restart=always
+
+[Install]
+WantedBy=sway-session.target

@@ -3,5 +3,11 @@
 wget https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb
 sudo dpkg -i protonvpn-stable-release_1.0.1-1_all.deb
 sudo apt update
-sudo apt install -y protonvpn
+
+# Protonvpn requires nm-applet and gnome-keyring to be installed 
+sudo apt install -y protonvpn network-manager-gnome gnome-keyring
 rm protonvpn-stable-release_1.0.1-1_all.deb
+
+systemctl --user daemon-reload
+systemctl --user enable network-manager-applet.service
+systemctl --user start network-manager-applet.service
