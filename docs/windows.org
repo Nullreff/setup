@@ -1,0 +1,34 @@
+
+* Windows
+
+If I'm ever forced to use windows this is the setup I follow.
+
+Chocolaty Packages:
+```
+chromium
+firefox
+curl
+git
+nssm
+rclone
+naps2
+bitwarden
+bitwarden-cli
+vlc
+microsoft-windows-terminal
+```
+
+In order to run emacs on windows I launch it using X forwarding as described in [hubisan/emacs-wsl](https://github.com/hubisan/emacs-wsl).
+In the future when [wslg](https://github.com/microsoft/wslg) ships I'll switch to that.
+
+** Rclone setup
+
+1. `choco install rclone nssm winfsp`
+2. Download the Rclone config from Bitwarden and copy it to `C:\WINDOWS\system32\config\systemprofile\.config\rclone\rclone.conf`
+3. `nssm install rclone_mount`
+   * Path: `C:\ProgramData\chocolatey\bin\rclone.exe`
+   * Arguments: `mount --vfs-cache-mode full --cache-dir D:\cache\rclone  --log-file D:\cache\rclone\remote.log --volname remote gdrive_encrypted:/ R:`
+   * Log on: This account: `<enter current account credentails>`
+   * Environment: `RCLONE_CONFIG_PASS=<password from bitwarden>` TODO: Store this in a more secure way
+
+If you want to play around with it, launch the GUI with `rclone rcd --rc-web-gui` or start running `rclone` commands
