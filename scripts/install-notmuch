@@ -2,3 +2,6 @@
 
 sudo apt install -y notmuch fdm
 notmuch new
+
+# TODO: Set up autorun for fdm
+# https://wiki.archlinux.org/title/Fdm
