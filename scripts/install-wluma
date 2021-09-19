@@ -17,7 +17,10 @@ make build
 sudo make install
 mkdir -p ~/.local/share/wluma/
 
-ln -s ~/src/wluma/wluma.service ~/.config/systemd/user/wluma.service
+if [ ! -f ~/.config/systemd/user/wluma.service]; then
+    ln -s ~/src/wluma/wluma.service ~/.config/systemd/user/wluma.service
+fi
+
 systemctl --user daemon-reload
 systemctl --user enable wluma.service
 systemctl --user start wluma.service
