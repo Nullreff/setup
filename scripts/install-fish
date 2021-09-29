@@ -1,4 +1,6 @@
 #!/bin/bash -e
 sudo apt install -y fish curl
 fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+
+# Set up links to nix env if we have it installed
 fish -c "fisher install lilyball/nix-env.fish"
