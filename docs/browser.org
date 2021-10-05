@@ -26,7 +26,7 @@ I use [[https://www.mozilla.org/en-US/firefox/developer/][Firefox Developer Edit
 - Install the ivory-dark theme for Tree Tabs, it can be found under `files/ivory-dark.tt_theme` in this repo
 - Under `Privacy & Security`, disable everything under `Logins and Passwords` and `Forms and Autofill` since Bitwarden handles it for me
 - Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same. In Custom New Tab, set `Theme` to `Dark` and check `Force links to open in the top frame (experemental)?`
-- Add the rules from `files/youtube-recommended-block.txt` in this repo to uBlock origin
+- Add the rules from `files/ublock-custom-rules.txt` in this repo to uBlock origin
 - Under `Search`, change default search engine to `DuckDuckGo`
 - Under `Privacy & Security`, select `Enable HTTPS-Only Mode in all windows`
 - In `about:config` change `reader.color_scheme` to `dark`

@@ -1,7 +1,0 @@
-! Blocks recommended videos from being shown on YouTube
-www.youtube.com##ytd-browse[page-subtype="home"]
-www.youtube.com##ytd-browse[page-subtype="subscriptions"]
-www.youtube.com###related
-www.youtube.com##.ytp-endscreen-content
-
-
