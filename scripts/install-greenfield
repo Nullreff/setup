@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+sudo apt install -y git
+
+mkdir -p ~/src/
+cd ~/src/
+
+if [ ! -d ~/src/greenfield/ ]; then
+    git clone https://github.com/udevbe/greenfield.git
+fi
+cd greenfield
+git pull
+
+cd compositor-module
+nix-shell -p yarn --command "yarn install"
