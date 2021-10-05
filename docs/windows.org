@@ -18,8 +18,8 @@ vlc
 microsoft-windows-terminal
 ```
 
-In order to run emacs on windows I launch it using X forwarding as described in [hubisan/emacs-wsl](https://github.com/hubisan/emacs-wsl).
-In the future when [wslg](https://github.com/microsoft/wslg) ships I'll switch to that.
+In order to run emacs on windows I launch it using X forwarding as described in [[https://github.com/hubisan/emacs-wsl][hubisan/emacs-wsl]].
+In the future when [[https://github.com/microsoft/wslg][wslg]] ships I'll switch to that.
 
 ** Rclone setup
 

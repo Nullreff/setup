@@ -4,25 +4,25 @@ I use [[https://www.mozilla.org/en-US/firefox/developer/][Firefox Developer Edit
 
 ** Addons
 
-- [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv/)
-- [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
-- [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/)
-- [Custom Bang Search](https://addons.mozilla.org/en-US/firefox/addon/custombangsearch/)
-- [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)
-- [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
-- [Fraidycat](https://addons.mozilla.org/en-US/firefox/addon/fraidycat/)
-- [Greasemonky](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-- [JSONView](https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
-- [Privacy.com](https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/)
-- [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/)
-- [Tree Tabs](https://addons.mozilla.org/en-US/firefox/addon/tree-tabs/)
-- [TTV ad-block](https://addons.mozilla.org/en-US/firefox/addon/ttv-adblock/)
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+- [[https://addons.mozilla.org/en-US/firefox/addon/betterttv/][BetterTTV]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/][Bitwarden]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/clearurls/][ClearURLs]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/custombangsearch/][Custom Bang Search]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/][Custom New Tab Page]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/darkreader/][Dark Reader]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/fraidycat/][Fraidycat]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/][Greasemonky]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/jsonview/][JSONView]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/][Privacy.com]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/][SponsorBlock]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/tree-tabs/][Tree Tabs]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/ttv-adblock/][TTV ad-block]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/][uBlock Origin]]
 
 ** Customizations
 
 - When it opens for the first time, select dark mode
-- Hide the tabs at the top using CSS since I use Tree Tabs [https://superuser.com/a/1268734](https://superuser.com/a/1268734)
+- [[https://superuser.com/a/1268734][Hide the tabs at the top using CSS since I use Tree Tabs]]
 - Install the ivory-dark theme for Tree Tabs, it can be found under `files/ivory-dark.tt_theme` in this repo
 - Under `Privacy & Security`, disable everything under `Logins and Passwords` and `Forms and Autofill` since Bitwarden handles it for me
 - Set my home page to `https://nullreff.net/dashboard/` and change Custom New Tab Page to the same. In Custom New Tab, set `Theme` to `Dark` and check `Force links to open in the top frame (experemental)?`
@@ -33,7 +33,7 @@ I use [[https://www.mozilla.org/en-US/firefox/developer/][Firefox Developer Edit
 - Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, `Tree Tabs`
 - Open `Settings` in the Bitwarden dropdown and changes `Theme` to `dark`
 
-If menus and drop downs aren't opening try [enabling and disabling the main display](https://bugzilla.mozilla.org/show_bug.cgi?id=1600584)
+If menus and drop downs aren't opening try [[https://bugzilla.mozilla.org/show_bug.cgi?id=1600584][enabling and disabling the main display]]
 `$ swaymsg output eDP-1 disable; swaymsg output eDP-1 enable`
 
-If Fraidycat isn't updating, try [restarting the browser completely](https://github.com/kickscondor/fraidycat/issues/92).
+If Fraidycat isn't updating, try [[https://github.com/kickscondor/fraidycat/issues/92][restarting the browser completely]].
