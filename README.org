@@ -19,7 +19,7 @@ su nullreff
 curl https://nullreff.net/install | bash
 #+END_SRC
 
-Rather than running the full =./setup= script you run individual scripts from the [[/scripts/]] folder.
+Rather than running the full =./setup= script you can run individual scripts from the [[/scripts/]] folder.
 For more details on how to setup various things, check out [[/docs/]] folder and read the comments I have in the install scritps and config files.
 
 ** Design
@@ -37,4 +37,5 @@ For my core devices, I currently use:
 - Debian Stable for my servers
 - Calyx OS for my phones
 
+I also keep Windows and OSX installs for software specific to them but they are not my primary devices.
 
