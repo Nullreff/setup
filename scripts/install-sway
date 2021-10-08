@@ -1,2 +1,2 @@
 #!/bin/bash -e
-sudo apt install -y sway swaybg swayidle swaylock wev ddcutil dmenu waybar brightnessctl xwayland
+sudo apt install -y sway swaybg swayidle swaylock wev ddcutil dmenu waybar brightnessctl xwayland grim
