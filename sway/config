@@ -218,9 +218,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Application hotkeys
-bindsym $mod+F1 exec emacs ~/remote/org/inbox.org
-bindsym $mod+F2 exec emacs ~/remote/org/notes.org
-bindsym $mod+F3 exec emacs ~/remote/org/lists.org
+bindsym $mod+F1 exec emacsclient --create-frame --alternate-editor=""
+bindsym $mod+F2 exec emacsclient --create-frame --alternate-editor="" ~/remote/org/inbox.org
+bindsym $mod+F3 exec emacsclient --create-frame --alternate-editor="" ~/remote/org/notes.org
+bindsym $mod+F4 exec emacsclient --create-frame --alternate-editor="" ~/remote/org/lists.org
 
 # Screenshot
 bindsym $mod+p exec grim
