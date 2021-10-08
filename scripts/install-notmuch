@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-sudo apt install -y notmuch fdm
+sudo apt install -y notmuch offlineimap
 notmuch new
 
 # TODO: Set up autorun for fdm
