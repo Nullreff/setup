@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-sudo apt install -y wget
+sudo apt install -y wget zenity
 
 if [ ! -f ~/downloads/steam.deb ]; then
     mkdir -p ~/downloads/
