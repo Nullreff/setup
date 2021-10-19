@@ -21,4 +21,4 @@ send "y\n"
 expect eof
 EOF
 
-systemctl restart --user emacs.servcie
+systemctl restart --user emacs
