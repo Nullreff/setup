@@ -1,0 +1,14 @@
+#!/bin/bash -e
+
+sudo apt install -y wget
+
+mkdir -p ~/downloads/
+cd ~/downloads/
+if [ ! -f UnityHubBeta.tar.gz ]; then
+    wget https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubBeta.tar.gz
+    tar -xf UnityHubBeta.tar.gz
+fi
+
+cd 'Unity Hub'
+chmod +x INSTALL.sh
+./INSTALL.sh
