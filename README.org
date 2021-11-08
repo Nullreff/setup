@@ -24,7 +24,7 @@ For more details on how to setup various things, check out [[/docs/]] folder and
 
 ** Design
 
-Pretty much everything in this repo is built to run on top of Debian or Android
+Pretty much everything in this repo is built to run on top of Debian or Android.
 This is for a few key reasons:
 
 1. They are ubiquitous across pretty much everything. The vast majority of software is built to support them. Having a configuration that can move from install to install and expect to work well for just about everything I do is important to me. There are plenty of other cool operating systems that I love for their philosophy and tech but none are as universally supported. If that changes and other systems gain more universal acceptance, I may be more inclined to swap.
