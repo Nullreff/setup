@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+sudo apt install -y python3
+pip3 install --user promnesia
+
+promnesia index
+
+promnesia install-server
+systemctl --user daemon-reload
