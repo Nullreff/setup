@@ -14,7 +14,7 @@ I use [[https://www.mozilla.org/en-US/firefox/developer/][Firefox Developer Edit
 - [[https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/][Greasemonky]]
 - [[https://addons.mozilla.org/en-US/firefox/addon/jsonview/][JSONView]]
 - [[https://addons.mozilla.org/en-US/firefox/addon/pay-by-privacy-com/][Privacy.com]]
-- [[https://addons.mozilla.org/en-US/firefox/addon/promnesia/][Promesia]]
+- [[https://addons.mozilla.org/en-US/firefox/addon/promnesia/][Promnesia]]
 - [[https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/][SponsorBlock]]
 - [[https://addons.mozilla.org/en-US/firefox/addon/tree-tabs/][Tree Tabs]]
 - [[https://addons.mozilla.org/en-US/firefox/addon/ttv-adblock/][TTV ad-block]]
