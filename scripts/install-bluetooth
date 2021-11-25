@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+sudo apt install blueman
+
+# Bluetooth can fail with the message "Protocol not available"
+# Have to install/remove some additional packages to fix it.
+# May require a reboot afterwards to make it fully work
+# https://unix.stackexchange.com/a/676829
+sudo apt install libspa-0.2-bluetooth
+sudo apt purge pulseaudio-module-bluetooth
