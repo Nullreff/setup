@@ -21,6 +21,12 @@ microsoft-windows-terminal
 In order to run emacs on windows I launch it using X forwarding as described in [[https://github.com/hubisan/emacs-wsl][hubisan/emacs-wsl]].
 In the future when [[https://github.com/microsoft/wslg][wslg]] ships I'll switch to that.
 
+** Grub default boot
+
+Since I use windows mostly for VR, I have it set as the default boot option in Grub.
+This is because when I have a VR headset plugged in to my NUC, it won't show the boot screen over the HDMI port.
+Until VR support on my setup reaches usable levels I'll likely keep this so that when I have a headset plugged in the boot will hit windows.
+
 ** Rclone setup
 
 1. `choco install rclone nssm winfsp`
