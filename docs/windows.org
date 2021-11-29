@@ -27,6 +27,10 @@ Since I use windows mostly for VR, I have it set as the default boot option in G
 This is because when I have a VR headset plugged in to my NUC, it won't show the boot screen over the HDMI port.
 Until VR support on my setup reaches usable levels I'll likely keep this so that when I have a headset plugged in the boot will hit windows.
 
+** Bitlocker
+
+I have full disk bitlocker enabled for my windows drive, no sense in leaving it unencrypted.
+
 ** Rclone setup
 
 1. `choco install rclone nssm winfsp`
