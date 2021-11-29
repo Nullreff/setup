@@ -9,7 +9,8 @@ FPS overlay and performance monitor. Attached to my left hand when it's pointed 
 
 ** XSOverlay
 
-Desktop overlay. Need to increase movement sensitivity in games to allow for scrolling with the joystick.
+Controller battery checker and desktop overlay attached to the back of my left hand.
+Need to increase movement sensitivity in games to allow for scrolling with the joystick.
 Possibly figure out a way to do scrolling without moving.
 
 ** OVR Advanced Settings
