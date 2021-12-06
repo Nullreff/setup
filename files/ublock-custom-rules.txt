@@ -5,7 +5,5 @@ www.youtube.com###related
 www.youtube.com##.ytp-endscreen-content
 
 ! Blocks trending and recommendations on twitter
-twitter.com##div.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.r-1d6w8o1.r-x572qd.css-1dbjc4n:nth-of-type(6)
-twitter.com##div.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.r-1d6w8o1.r-x572qd.css-1dbjc4n:nth-of-type(5)
-twitter.com##.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.r-k0dy70.r-1ysxnx4.css-1dbjc4n
-
+twitter.com/explore##[data-testid="sidebarColumn"]
+twitter.com##[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(n+3)
