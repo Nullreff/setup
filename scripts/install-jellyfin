@@ -4,4 +4,4 @@ sudo apt install -y docker.io
 
 sudo docker pull jellyfin/jellyfin:latest
 sudo mkdir -p /srv/jellyfin/{config,cache}
-sudo docker run -d -v /srv/jellyfin/config:/config -v /srv/jellyfin/cache:/cache -v /media:/media --net=host jellyfin/jellyfin:latest
+sudo docker run -d -v /srv/jellyfin/config:/config -v /srv/jellyfin/cache:/cache --cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfine -v /home/nullreff/remote/media:/media:rshared --net=host jellyfin/jellyfin:latest
