@@ -2,6 +2,8 @@
 
 sudo apt install -y rclone fuse
 
+sudo cp ~/.config/files/fuse.conf /etc/fuse.conf
+
 mkdir -p ~/remote ~/.cache/rclone/remote/
 
 systemctl --user enable rclone-remote.service
