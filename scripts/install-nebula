@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+sudo apt install -y wget
+
+mkdir -p ~/downloads/
+cd ~/downloads/
+
+wget https://github.com/slackhq/nebula/releases/download/v1.5.0/nebula-linux-amd64.tar.gz
+tar -xf nebula-linux-amd64.tar.gz
+
+cp nebula nebula-cert ~/.local/bin/
