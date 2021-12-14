@@ -130,7 +130,7 @@
     "custom/rclone": {
         "restart-interval": 5,
         "exec-if": "exit 0",
-        "exec": "journalctl --user -u rclone-remote | grep ', ETA ' | sed 's/.*INFO  :     \\(+*\\)/\\1/' | tail -n1",
+        "exec": "journalctl --user -u rclone-remote | grep ', ETA ' | sed 's/.*INFO  :[ ]*\\(+*\\)/\\1/' | tail -n1",
         "on-click": "alacritty -e journalctl --user -fu rclone-remote",
     }
 }
