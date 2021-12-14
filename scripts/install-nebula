@@ -8,4 +8,5 @@ cd ~/downloads/
 wget https://github.com/slackhq/nebula/releases/download/v1.5.0/nebula-linux-amd64.tar.gz
 tar -xf nebula-linux-amd64.tar.gz
 
+mkdir -p ~/.local/bin/
 cp nebula nebula-cert ~/.local/bin/
