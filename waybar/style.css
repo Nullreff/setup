@@ -45,8 +45,7 @@ window#waybar.chromium {
     border-radius: 5px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */ #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 -3px #DDD;
 }
@@ -79,7 +78,8 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
-#mpd {
+#mpd,
+#custom-rclone {
     padding: 0 10px;
     margin: 0 4px;
     color: #AAA;

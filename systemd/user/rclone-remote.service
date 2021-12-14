@@ -7,7 +7,7 @@ After=sway-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/rclone mount --allow-other --vfs-cache-mode full --cache-dir /home/nullreff/.cache/rclone/remote/ --volname remote gdrive_encrypted:/ /home/nullreff/remote/
+ExecStart=/usr/bin/rclone mount --allow-other --log-level INFO --progress --stats 10s --stats-one-line --vfs-cache-mode full --cache-dir /home/nullreff/.cache/rclone/remote/ --volname remote gdrive_encrypted:/ /home/nullreff/remote/
 Restart=always
 
 [Install]
