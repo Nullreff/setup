@@ -20,7 +20,7 @@ curl https://nullreff.net/install | bash
 #+END_SRC
 
 Rather than running the full =./setup= script you can run individual scripts from the [[/scripts/]] folder.
-For more details on how to setup various things, check out [[/docs/]] folder and read the comments I have in the install scritps and config files.
+For more details on how to setup various things, check out [[/docs/]] folder and read the comments I have in the install scripts and config files.
 
 ** Design
 
