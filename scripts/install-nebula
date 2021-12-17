@@ -14,7 +14,7 @@ rm nebula-linux-amd64.tar.gz
 sudo mv nebula nebula-cert /usr/bin/
 
 # Grab signing certs from bitwarden
-SESSION=`bw login --raw`
+SESSION=`bw unlock --raw`
 bw sync --session $SESSION
 
 # ca.crt & ca.key
