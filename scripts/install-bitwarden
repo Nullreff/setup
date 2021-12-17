@@ -1,2 +1,5 @@
 #!/bin/bash -e
+
+~/.config/scripts/install-snap
+
 sudo snap install bw

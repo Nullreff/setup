@@ -1,8 +1,9 @@
 #!/bin/bash -e
 # Docs: https://www.defined.net/nebula/introduction/#/
 
-sudo apt install -y wget snap
-sudo snap install bw
+sudo apt install -y wget dnsutils
+
+~/.config/scripts/install-bitwarden
 
 mkdir -p ~/downloads/
 cd ~/downloads/
