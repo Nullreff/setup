@@ -35,7 +35,12 @@ sudo mv $NAME.key /etc/nebula/host.key
 sudo rm ca.key
 
 cd ~/.config/nebula/
+
+# Use the lighthouse config this is a lighthouse
+#sudo cp config-lighthouse.yaml /etc/nebula/
 sudo cp config.yaml /etc/nebula/
+
+
 sudo cp nebula.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable nebula.service
