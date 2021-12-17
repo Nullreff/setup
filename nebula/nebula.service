@@ -1,0 +1,13 @@
+[Unit]
+Description=Nebula overlay network
+Documentation=nebula --help
+After=network.target auditd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nebula -config /etc/nebula/config.yaml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

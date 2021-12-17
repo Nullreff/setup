@@ -1,12 +1,42 @@
 #!/bin/bash -e
+# Docs: https://www.defined.net/nebula/introduction/#/
 
-sudo apt install -y wget
+sudo apt install -y wget snap
+sudo snap install bw
 
 mkdir -p ~/downloads/
 cd ~/downloads/
 
 wget https://github.com/slackhq/nebula/releases/download/v1.5.0/nebula-linux-amd64.tar.gz
 tar -xf nebula-linux-amd64.tar.gz
+rm nebula-linux-amd64.tar.gz
 
-mkdir -p ~/.local/bin/
-cp nebula nebula-cert ~/.local/bin/
+sudo mv nebula nebula-cert /usr/bin/
+
+# Grab signing certs from bitwarden
+SESSION=`bw login --raw`
+bw sync --session $SESSION
+
+# ca.crt & ca.key
+rm -rf ~/.local/tmp/
+mkdir -p ~/.local/tmp/
+cd ~/.local/tmp/
+bw get attachment n58to9hcn0gkfsz2rqagau07kg011x76 --itemid d56daf9e-5293-41bf-96a2-adfa005974a0 --session $SESSION
+bw get attachment slb7l4og8q5hkg94einq2pzpofd01mqj --itemid d56daf9e-5293-41bf-96a2-adfa005974a0 --session $SESSION
+
+NAME=`hostname`
+IP=`dig A $NAME.nullreff.net +short`
+nebula-cert sign -name "$NAME" -ip "$IP/16"
+
+sudo mkdir -p /etc/nebula/
+sudo mv ca.crt /etc/nebula/ca.crt
+sudo mv $NAME.crt /etc/nebula/host.crt
+sudo mv $NAME.key /etc/nebula/host.key
+sudo rm ca.key
+
+cd ~/.config/nebula/
+sudo cp config.yaml /etc/nebula/
+sudo cp nebula.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable nebula.service
+sudo systemctl start nebula.service
