@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'uri'
+require 'net/http'
+require 'base64'
+require 'erb'
+
+GROUP_NAMES = %w(Social Data Media)
+
+session = `bw unlock --raw`
+`bw sync --session #{session}`
+
+groups_str = `bw list folders --session #{session}`
+groups_data = JSON.parse(groups_str)
+
+groups = GROUP_NAMES.map do |name|
+  found = groups_data.find {|g| g['name'] == name}
+  raise "Group #{name} not found" unless found
+  found
+end
+
+results = groups.map do |group|
+  items_str = `bw list items --folderid #{group['id']} --session #{session}`
+  items_data = JSON.parse(items_str)
+
+  {
+    name: group['name'],
+    items: items_data.map do |item|
+      uri = item['login']['uris'][0]['uri']
+      host = URI(uri).host
+      icon = "https://icons.bitwarden.net/#{host}/icon.png"
+      response = Net::HTTP.get(URI.parse(icon))
+      icon_data = Base64.encode64(response)
+
+      {
+        name: item['name'],
+        uri: uri,
+        icon: "data:image/png;base64,#{icon_data}",
+      }
+    end,
+  }
+end
+
+css_uri = 'https://nullreff.net/css/application.css'
+css = Net::HTTP.get(URI.parse(css_uri))
+
+time = Time.now
+renderer = ERB.new(DATA.read)
+dashboard_html = renderer.result()
+
+path = File.expand_path('~/.config/files/go.nullreff.net/index.html')
+File.write(path, dashboard_html)
+
+
+__END__
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      <%= css %>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <% results.each do |group| %>
+        <div class="col">
+          <h2><%= group[:name] %></h2>
+          <div class="list-group">
+            <% group[:items].each do |item| %>
+            <a href="<%= item[:uri] %>" class="list-group-item list-group-item-action">
+              <img src="<%= item[:icon] %>" alt="<%= item[:name] %> icon" width="32px" height="32px" />
+              <%= item[:name] %>
+            </a>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div class="row">
+        Last updated <%= time %>
+      </div>
+    </div>
+  </body>
+</html>
+

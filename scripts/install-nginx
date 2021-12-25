@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+sudo apt install -y nginx
+sudo cp ~/.config/files/nginx_default /etc/nginx/sites-available/default
+mkdir -p ~/.config/files/go.nullreff.net/
+~/.config/scripts/build-go.nullreff.net
+sudo systemctl restart nginx
