@@ -30,3 +30,6 @@ This is set up with chords so that others using my controllers don't accidentall
 Currently the right hand playspace mover doesn't work, not completely sure why..
 
 
+** Beatsaber Downgrade
+
+Keeping a link to [[https://steamcommunity.com/sharedfiles/filedetails/?id=1805934840][this guide]] just in case Beatsaber updates and you want to keep using mods
