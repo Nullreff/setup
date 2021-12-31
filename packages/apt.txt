@@ -42,3 +42,4 @@ fonts-noto-extra
 fonts-font-awesome
 uuid-runtime
 nmap
+lm-sensors
