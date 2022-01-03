@@ -47,6 +47,9 @@ Auraura Store:
 - IBKR
 - Bitwarden
 
+Other:
+- [[https://github.com/clragon/e1547][e1547]]
+
 ** Setup
 
 *** Settings
@@ -132,5 +135,6 @@ Auraura Store:
 *** App Configuration
 
 -Weather
-    - Set temperature to C
-
+  - Set temperature to C
+- e1547
+  - Change the host to the correct site, you know which one
