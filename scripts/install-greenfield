@@ -1,6 +1,25 @@
 #!/bin/bash -e
 
-sudo apt install -y git
+sudo apt install -y--no-install-recommends \
+    git \
+    npm \
+    build-essential \
+    cmake \
+    libffi-dev \
+    libgstreamer1.0-dev \
+    libgstreamer-plugins-base1.0-dev \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-ugly \
+    libosmesa6 \
+    libegl1-mesa \
+    libgbm1 \
+    libwayland-egl1-mesa \
+    libwayland-server0 \
+    xwayland \
+    xauth \
+    xxd 
+
+yarn global add cmake-js
 
 mkdir -p ~/src/
 cd ~/src/
@@ -13,3 +32,9 @@ git pull
 
 cd compositor-module
 nix-shell -p yarn --command "yarn install"
+
+cd compositor-proxy
+COMPOSITOR_SESSION_ID=test123
+GST_GL_WINDOW=gbm
+yarn install
+
