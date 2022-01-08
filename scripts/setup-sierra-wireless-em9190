@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+# Thread going over troubleshooting
+# https://www.wirelessjoint.com/viewtopic.php?t=3001
+
+sudo apt install -y socat modemmanager modem-manager-gui
+
+sudo modprobe option
+echo 1199 90d3 | sudo tee /sys/bus/usb-serial/drivers/option1/new_id
+
+# Enable debug mode for running AT commands
+sudo sed -e 's/ExecStart=\/usr\/sbin\/ModemManager$/\0 --debug/' -i /lib/systemd/system/ModemManager.service
+sudo systemctl daemon-reload
+sudo systemctl restart ModemManager
+
+echo "Run the commands in https://wirelessjoint.com/viewtopic.php?t=2212"

@@ -1,6 +1,8 @@
 #!/bin/bash -e
 sudo apt-get install -y emacs git ripgrep findutils fd-find cmake libtool-bin expect
 
+mkdir -p ~/org/
+
 systemctl enable --user emacs
 systemctl start --user emacs
 
