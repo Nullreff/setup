@@ -3,7 +3,8 @@
 # Thread going over troubleshooting
 # https://www.wirelessjoint.com/viewtopic.php?t=3001
 
-sudo apt install -y socat modemmanager modem-manager-gui
+sudo apt install -y socat
+~/.config/scripts/install-edl
 
 sudo modprobe option
 echo 1199 90d3 | sudo tee /sys/bus/usb-serial/drivers/option1/new_id
@@ -14,3 +15,12 @@ sudo systemctl daemon-reload
 sudo systemctl restart ModemManager
 
 echo "Run the commands in https://wirelessjoint.com/viewtopic.php?t=2212"
+echo "Commands guide https://wirelessjoint.com/viewtopic.php?t=33"
+echo "Programming carrier bands https://wirelessjoint.com/viewtopic.php?t=364"
+echo "Selecting carrier firmware https://wirelessjoint.com/viewtopic.php?t=692"
+echo "Modem configurations repo https://github.com/danielewood/sierra-wireless-modems"
+echo "Sierra keygen and other tools https://github.com/bkerler/edl"
+echo "Modem Manager docs https://wiki.archlinux.org/title/Mobile_broadband_modem#ModemManager"
+
+# Enclosure I use
+# https://thewirelesshaven.com/shop/mini-pcie-m2-adapters/modem-enclosure/usb3-0-to-ngff-m-2-key-b-4g-5g-modem-adapter-enclosure-with-sim-card-slot-new-style/

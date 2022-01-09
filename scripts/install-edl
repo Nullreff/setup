@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+sudo apt install -y adb fastboot python3-dev python3-pip python3-setuptools liblzma-dev git
+sudo apt purge -y modemmanager
+
+mkdir -p ~/src/
+cd ~/src/
+
+if [ ! -d ~/src/edl/ ]; then
+    git clone https://github.com/bkerler/edl.git
+fi
+
+cd edl
+git pull
+git submodule update --init --recursive
+
+sudo cp Drivers/51-edl.rules /etc/udev/rules.d
+sudo cp Drivers/50-android.rules /etc/udev/rules.d
+
+python3 setup.py build
+sudo python3 setup.py install
