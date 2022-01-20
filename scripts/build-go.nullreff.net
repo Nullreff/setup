@@ -10,6 +10,7 @@ GROUP_NAMES = %w(Social Data Media)
 session = `bw unlock --raw`
 `bw sync --session #{session}`
 
+p 'Building go.nullreff.net...'
 groups_str = `bw list folders --session #{session}`
 groups_data = JSON.parse(groups_str)
 
@@ -51,6 +52,7 @@ dashboard_html = renderer.result()
 path = File.expand_path('~/.config/files/go.nullreff.net/index.html')
 File.write(path, dashboard_html)
 
+p 'Done'
 
 __END__
 <!DOCTYPE html>
