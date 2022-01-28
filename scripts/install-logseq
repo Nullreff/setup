@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+mkdir -p ~/bin/
+cd ~/bin/
+wget https://github.com/logseq/logseq/releases/download/0.5.8/Logseq-linux-x64-0.5.8.AppImage
+chmod +x Logseq*
+rm -f logseq
+ln -s Logseq* logseq
