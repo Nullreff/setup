@@ -46,3 +46,7 @@ I have full disk bitlocker enabled for my windows drive, no sense in leaving it 
 Follow the [[https://github.com/diddledani/one-script-wsl2-systemd][instructons here]] on how to set up WSL2 to run systemd.
 
 If you want to play around with it, launch the GUI with `rclone rcd --rc-web-gui` or start running `rclone` commands
+
+** Remote Desktop
+
+Set to enabled by default on private networks
