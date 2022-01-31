@@ -1,0 +1,9 @@
+* Looking Glass Factory
+
+Currently using a Lookin Glass Portrait, need to install the following software:
+
+- HoloPlay Service
+- HoloPlay Unity Plugin
+- Blender Add-On
+
+Can be downloaded from [[https://lookingglassfactory.com/software]]
