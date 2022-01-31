@@ -3,3 +3,5 @@
 	name = Nullreff
 [init]
 	defaultBranch = main
+[core]
+	editor = vim
