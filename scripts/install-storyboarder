@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+sudo apt install -y wget
+
+mkdir -p ~/bin/
+cd ~/bin/
+
+wget https://github.com/wonderunit/storyboarder/releases/download/v3.0.0/Storyboarder-3.0.0-linux-x86_64.AppImage
+chmod +x Storyboarder-3.0.0-linux-x86_64.AppImage
+ln -s Storyboarder-3.0.0-linux-x86_64.AppImage storyboarder
+
