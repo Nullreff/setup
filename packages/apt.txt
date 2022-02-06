@@ -43,3 +43,5 @@ fonts-font-awesome
 uuid-runtime
 nmap
 lm-sensors
+remmina
+flatpak
