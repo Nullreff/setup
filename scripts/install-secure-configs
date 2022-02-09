@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 echo 'Log in to Bitwarden to download secure config files'
-SESSION=`bw login --raw`
+SESSION=`bw unlock --raw`
 bw sync --session $SESSION
 
 # rclone.conf
