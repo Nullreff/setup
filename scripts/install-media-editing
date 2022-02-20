@@ -1,5 +1,5 @@
 #!/bin/bash -e
-sudo apt install -y blender gimp krita
+sudo apt install -y blender gimp krita inkscape
 
 echo 'You should also install the CATS plugin for blender'
 echo 'https://github.com/absolute-quantum/cats-blender-plugin'
