@@ -35,7 +35,7 @@ I use [[https://www.mozilla.org/en-US/firefox/developer/][Firefox Developer Edit
 - In `about:config` change `reader.color_scheme` to `dark`
 - Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, `Tree Tabs`, 'Promnesia', 'Multi-Account Containers'
 - Open `Settings` in the Bitwarden dropdown and changes `Theme` to `dark`
-- Create the following profiles in Multi-Account Containers: 'Personal', 'Horny'
+- Create the following profiles in Multi-Account Containers: 'Personal', 'Horny', 'OSINT'
 
 If menus and drop downs aren't opening try [[https://bugzilla.mozilla.org/show_bug.cgi?id=1600584][enabling and disabling the main display]]
 `$ swaymsg output eDP-1 disable; swaymsg output eDP-1 enable`
