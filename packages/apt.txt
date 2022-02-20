@@ -45,3 +45,4 @@ nmap
 lm-sensors
 remmina
 flatpak
+evince
