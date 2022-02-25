@@ -46,3 +46,4 @@ lm-sensors
 remmina
 flatpak
 evince
+fancontrol
