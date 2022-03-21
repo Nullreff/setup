@@ -34,5 +34,6 @@ sudo apt-get install -y $(grep -vE "^\s*#" packages/apt.txt  | tr "\n" " ")
 ./scripts/install-thunar
 ./scripts/install-nix
 ./scripts/install-protonvpn
+./scripts/install-nix
 
 sudo apt autoremove
