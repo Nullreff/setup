@@ -6,11 +6,16 @@ if [ $(systemctl list-unit-files "lighdm*" | wc -l) -gt 3 ]; then
     sudo systemctl disable lightdm.service
 fi
 
+# Disable ssdm
+if [ $(systemctl list-unit-files "sddm*" | wc -l) -gt 3 ]; then
+    sudo systemctl disable sddm.service
+fi
+
 sudo apt-get install -y build-essential libpam0g-dev libxcb-xkb-dev
 
 mkdir -p ~/src/
 if [ ! -d ~/src/ly/ ]; then
-    git clone https://github.com/nullgemm/ly.git ~/src/ly/
+    git clone --recurse-submodules https://github.com/nullgemm/ly.git ~/src/ly/
 fi
 
 cd ~/src/ly/
