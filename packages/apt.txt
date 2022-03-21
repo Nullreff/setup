@@ -47,3 +47,5 @@ remmina
 flatpak
 evince
 fancontrol
+gparted
+dislocker
