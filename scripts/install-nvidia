@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+sudo apt install -y \
+    nvidia-driver \
+    firmware-misc-nonfree \
+    libnvidia-egl-wayland1
+sudo cp ~/.config/files/nvidia-drm.conf /etc/modprobe.d/
+sudo update-grub2
