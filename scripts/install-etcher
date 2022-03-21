@@ -1,0 +1,20 @@
+#!/bin/bash -e
+
+sudo apt install -y wget unzip
+
+mkdir -p ~/Downloads ~/bin
+rm -f ~/Downloads/balena-etcher-electron-*-linux-x64.zip \
+    ~/Downloads/balenaEtcher-*-x64.AppImage \
+    ~/bin/balenaEtcher-*-x64.AppImage \
+    ~/bin/etcher
+
+cd ~/Downloads
+
+wget https://github.com/balena-io/etcher/releases/download/v1.7.8/balena-etcher-electron-1.7.8-linux-x64.zip
+unzip balena-etcher-electron-*-linux-x64.zip
+cp balenaEtcher-*-x64.AppImage ~/bin
+ln -s ~/bin/balenaEtcher-*-x64.AppImage ~/bin/etcher
+
+rm -f ~/Downloads/balena-etcher-electron-*-linux-x64.zip \
+    ~/Downloads/balenaEtcher-*-x64.AppImage
+
