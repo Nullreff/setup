@@ -16,7 +16,6 @@ fi
 cd ~/src/ly/
 git pull
 
-make github
 make
 sudo make install
 sudo systemctl enable ly.service
