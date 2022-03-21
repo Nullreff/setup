@@ -33,7 +33,7 @@ I use [[https://www.mozilla.org/en-US/firefox/developer/][Firefox Developer Edit
 - Under `Search`, change default search engine to `DuckDuckGo`
 - Under `Privacy & Security`, select `Enable HTTPS-Only Mode in all windows`
 - In `about:config` change `reader.color_scheme` to `dark`
-- Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, `Tree Tabs`, 'Promnesia', 'Multi-Account Containers'
+- Customize the toolbar to only show `Downloads`, `Fraidycat`, `Bitwarden`, `Privacy`, `Dark Reader`, `Greasemonkey`, `uBlock Origin`, 'Promnesia', 'Read Aloud', 'Multi-Account Containers', `Tree Tabs`
 - Open `Settings` in the Bitwarden dropdown and changes `Theme` to `dark`
 - Create the following profiles in Multi-Account Containers: 'Personal', 'Horny', 'OSINT'
 
