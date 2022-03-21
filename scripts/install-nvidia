@@ -2,6 +2,7 @@
 
 sudo apt install -y \
     nvidia-driver \
+    nvidia-xconfig \
     firmware-misc-nonfree \
     libnvidia-egl-wayland1
 sudo cp ~/.config/files/nvidia-drm.conf /etc/modprobe.d/
