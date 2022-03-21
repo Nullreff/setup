@@ -8,6 +8,7 @@ require 'erb'
 GROUP_NAMES = %w(Social Data Media)
 
 session = `bw unlock --raw`
+abort unless session && !session.empty?
 `bw sync --session #{session}`
 
 p 'Building go.nullreff.net...'
