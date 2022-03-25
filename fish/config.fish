@@ -17,6 +17,7 @@ function update
     sudo apt autoremove -y
     sudo apt clean
     sudo snap refresh
+    snap refresh --beta --devmode anbox
     vim +BundleInstall +qall
     doom upgrade
 end
