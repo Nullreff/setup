@@ -3,7 +3,9 @@ www.youtube.com##ytd-browse[page-subtype="home"]
 www.youtube.com##ytd-browse[page-subtype="subscriptions"]
 www.youtube.com###related
 www.youtube.com##.ytp-endscreen-content
+www.youtube.com##ytd-shelf-renderer
 
 ! Blocks trending and recommendations on twitter
 twitter.com/explore##[data-testid="sidebarColumn"]
 twitter.com##[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(n+3)
+
