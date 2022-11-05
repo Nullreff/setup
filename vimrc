@@ -1,18 +1,23 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'gmarik/vundle'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'dracula/vim', {'name': 'dracula'}
+call plug#begin()
 
-call vundle#end()
+Plug 'gmarik/vundle'
+Plug 'Lokaltog/vim-powerline'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'dracula/vim', {'name': 'dracula'}
+
+call plug#end()
 filetype plugin indent on
 syntax enable
 
