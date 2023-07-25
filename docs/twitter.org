@@ -1,0 +1,11 @@
+* Twitter
+
+** Muted Words
+
+- suggest_ranked_timeline_tweet
+- suggest_pyle_tweet
+- suggest_recycled_tweet
+- suggest_recap
+- suggest_who_to_follow
+- suggest_activity_tweet
+- suggest_recycled_tweet_inline
