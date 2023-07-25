@@ -1,7 +1,13 @@
 #!/bin/bash -e
 
-sudo apt install -y nginx
+yay -Sy nginx
+
+sudo mkdir -p /etc/nginx/sites-{available,enabled}
 sudo cp ~/.config/files/nginx_default /etc/nginx/sites-available/default
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
 mkdir -p ~/.config/files/go.nullreff.net/
 ~/.config/scripts/build-go.nullreff.net
+chmod 755 /home/nullreff
+
 sudo systemctl restart nginx

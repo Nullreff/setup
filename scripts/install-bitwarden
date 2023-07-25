@@ -1,5 +1,3 @@
 #!/bin/bash -e
 
-~/.config/scripts/install-snap
-
-sudo snap install bw
+yay -Sy --noconfirm bitwarden-cli

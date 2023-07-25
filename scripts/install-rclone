@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-sudo apt install -y rclone fuse
+yay -Sy rclone fuse
 
 sudo cp ~/.config/files/fuse.conf /etc/fuse.conf
 
